@@ -1,0 +1,8 @@
+2. Descrição resumida dos casos de uso selecionados (22/04/2019)
+
+Caso de usos:
+    • Emitir relatórios resumido financeiros de um aluno:  Uma pessoa chega no funcionário solicitando um relatório contendo  os seguintes itens: total pago, o total das mensalidades e o total ainda devido até uma certa data para um certo aluno. 
+    • Emitir relatórios detalhado financeiros de um aluno: Uma pessoa chega no funcionário solicitando um relatório contendo  os seguintes itens: total pago, o total das mensalidades e o total ainda devido até uma certa data para um certo aluno, os dados de pagamento das mensalidades devem estar todos os detalhes de cada pagamento entre duas datas. 
+    • Promover um aluno para uma faixa superior: o funcionário deve ser capaz de  promover o aluno para uma faixa superior. 
+    • Convidar o aluno para exame de faixa: o funcionário deve ser capaz de enviar um convite para o exame, para isso o mesmo deve cadastrar a data para a qual o aluno foi convidado para exame de faixa. O convite é feito via e-mail.
+    • Imprimir o título do aluno: Uma pessoa chega no funcionário o qual deve ser capaz de imprimir o título do aluno (como membro do dojo), por esse motivo o aluno deve fornecer o nome pra o funcionário. Esse convite terá o nome da pessoa, a data de matrícula e a faixa que o aluno detém. 

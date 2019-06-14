@@ -1,0 +1,18 @@
+
+
+1. Identificação dos Casos de Uso e dos Atores de cada Caso de Uso (17/04/2019)
+Atores:
+    • Funcionário, aluno
+      
+Caso de usos:
+    • Emitir relatório resumido de finanças de um aluno
+        ◦ Ator: funcionário
+    • Emitir relatórios detalhado de finanças de um aluno
+        ◦ Ator: funcionário
+    • Promover um aluno para uma faixa superior
+        ◦ Ator: funcionário
+    • Convidar o aluno para exame de faixa
+        ◦ Ator: funcionário e aluno
+    • Imprimir o título do aluno
+        ◦ Ator: funcionário
+
