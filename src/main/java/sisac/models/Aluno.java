@@ -6,7 +6,6 @@ import java.util.ArrayList;
 
 public class Aluno extends Pessoa {
 
-    private int id;
     private RegistroDePagamento registroPagamentos;
     private ArrayList<Certificado> certificados;
     private String faixa;
@@ -15,8 +14,9 @@ public class Aluno extends Pessoa {
     private DataFormatada dataFimMatricula;
     private boolean matriculado;
 
+
     public Aluno() {
-        registroPagamentos = new RegistroDePagamento(id);
+        registroPagamentos = new RegistroDePagamento();
         certificados = new ArrayList<>();
         matriculado = true;
         graduacao = 0;
@@ -37,6 +37,7 @@ public class Aluno extends Pessoa {
 
     public void setGraduacao(int graduacao) {
         this.graduacao = graduacao;
+        this.faixa = Faixa.getFaixa(graduacao);
     }
 
     public void setDataMatricula(DataFormatada dataMatricula) {
@@ -64,9 +65,6 @@ public class Aluno extends Pessoa {
         registroPagamentos.adicionaPagamento(pagamento);
     }
 
-    public int getId() {
-        return id;
-    }
 
     public RegistroDePagamento getRegistroPagamentos() {
         return registroPagamentos;

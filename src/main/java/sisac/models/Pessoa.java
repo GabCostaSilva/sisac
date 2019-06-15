@@ -3,18 +3,24 @@ package sisac.models;
 public class Pessoa {
     private String nome;
     private String endereco;
-    private String cidade;
-    private String estado;
     private String telefone;
+    private String cpf;
 
     public Pessoa() {}
 
-    public Pessoa(String nome, String endereco, String cidade, String estado, String telefone) {
+    public Pessoa(String nome, String endereco, String cpf, String telefone) {
         this.nome = nome;
         this.endereco = endereco;
-        this.cidade = cidade;
-        this.estado = estado;
         this.telefone = telefone;
+        this.cpf = cpf;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     public String getNome() {
@@ -31,22 +37,6 @@ public class Pessoa {
 
     public void setEndereco(String endereco) {
         this.endereco = endereco;
-    }
-
-    public String getCidade() {
-        return cidade;
-    }
-
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
-    }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
     }
 
     public String getTelefone() {

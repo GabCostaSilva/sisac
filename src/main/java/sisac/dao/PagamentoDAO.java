@@ -73,7 +73,6 @@ public class PagamentoDAO {
             Date data = Date.valueOf(pagamento.getData());
             stmt.setDate(2, data);
             stmt.setString(3, pagamento.getTipo());
-            stmt.setInt(4, pagamento.getAluno().getId());
             return stmt;
     }
 }

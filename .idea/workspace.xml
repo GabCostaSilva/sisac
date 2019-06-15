@@ -2,19 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c18a0269-5190-4094-bc44-c5dd9f27f93a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_5_1_47.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_8_0_16.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sisac/tests/AlunoDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sisac/helpers/CPFGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/9ab33a65-928f-45f2-96ff-bf56e802b7f8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9ab33a65-928f-45f2-96ff-bf56e802b7f8.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/gabriel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/gabriel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sisac/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sisac/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sisac/dao/AlunoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sisac/dao/AlunoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/dao/ExameDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sisac/dao/ExameDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sisac/dao/PagamentoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sisac/dao/PagamentoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/helpers/DataFormatada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sisac/helpers/DataFormatada.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sisac/models/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sisac/models/Aluno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/models/RelatorioFinanceiro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/models/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sisac/models/Pessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/models/RegistroDePagamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sisac/models/RegistroDePagamento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/tests/AlunoDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sisac/tests/AlunoDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sisac/dao/AlunoDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sisac/dao/AlunoDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sisac/models/Aluno.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sisac/models/Aluno.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sisac/models/Pessoa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sisac/models/Pessoa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sisac/tests/AlunoDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sisac/tests/AlunoDaoTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -66,71 +68,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sisac/dao/CertificadoDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sisac/dao/ExameDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sisac/tests/AlunoDaoTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/src.zip!/java/lang/System.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="109" column="36" selection-start-line="109" selection-start-column="36" selection-end-line="109" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/src.zip!/java/io/Console.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="556" column="12" selection-start-line="556" selection-start-column="12" selection-end-line="556" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sisac/helpers/DataFormatada.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sisac/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+            <state relative-caret-position="-303">
+              <caret line="45" column="29" lean-forward="true" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -139,36 +81,14 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sisac/ConnectionFactory.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sisac/dao/PagamentoDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-168">
-              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+            <state relative-caret-position="323">
+              <caret line="75" column="24" lean-forward="true" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sisac/models/Aluno.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sisac/dao/AlunoDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#301#302#0" expanded="true" />
+                <element signature="e#362#363#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -215,15 +135,18 @@
         <option value="$PROJECT_DIR$/src/test/java/daoTests/ExameDaoTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/daoTests/AlunoDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/test/java/daoTests/AlunoDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sisac/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sisac/dao/PagamentoDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/test/java/daoTests/AlunoDaoTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/test/java/daoTests/AlunoDaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/sisac/models/RelatorioFinanceiro.java" />
         <option value="$PROJECT_DIR$/src/main/java/sisac/helpers/DataFormatada.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sisac/models/Aluno.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sisac/dao/AlunoDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sisac/models/Pessoa.java" />
         <option value="$PROJECT_DIR$/src/main/java/sisac/tests/AlunoDaoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sisac/dao/AlunoDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sisac/models/RegistroDePagamento.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sisac/helpers/CPFGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sisac/models/Aluno.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sisac/dao/PagamentoDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sisac/Main.java" />
       </list>
     </option>
   </component>
@@ -234,7 +157,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="273" />
+    <option name="x" value="-92" />
+    <option name="y" value="130" />
     <option name="width" value="1024" />
     <option name="height" value="555" />
   </component>
@@ -276,15 +200,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="sisac" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sisac" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sisac" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sisac" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -342,7 +257,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AlunoDaoTest.shouldCreateAluno">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sisac.Main" />
+      <module name="Sisac" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sisac.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AlunoDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sisac" />
       <extension name="coverage">
@@ -374,6 +302,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AlunoDaoTest.shouldListAlunos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sisac" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sisac.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sisac.tests" />
+      <option name="MAIN_CLASS_NAME" value="sisac.tests.AlunoDaoTest" />
+      <option name="METHOD_NAME" value="shouldListAlunos" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AlunoDaoTest.shouldUpdateAluno" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sisac" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sisac.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sisac.tests" />
+      <option name="MAIN_CLASS_NAME" value="sisac.tests.AlunoDaoTest" />
+      <option name="METHOD_NAME" value="shouldUpdateAluno" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="sisac in Sisac" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="Sisac" />
       <extension name="coverage">
@@ -393,8 +353,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AlunoDaoTest.shouldCreateAluno" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.AlunoDaoTest" />
+        <item itemvalue="JUnit.AlunoDaoTest.shouldListAlunos" />
+        <item itemvalue="JUnit.AlunoDaoTest.shouldUpdateAluno" />
+        <item itemvalue="JUnit.AlunoDaoTest.shouldCreateAluno" />
       </list>
     </recent_temporary>
   </component>
@@ -412,7 +375,7 @@
       <workItem from="1560562618734" duration="2524000" />
       <workItem from="1560569001232" duration="5442000" />
       <workItem from="1560606989821" duration="2086000" />
-      <workItem from="1560609138706" duration="4294000" />
+      <workItem from="1560609138706" duration="9700000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1560565456945</created>
@@ -425,43 +388,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AlunoDaoTest_shouldCreateAluno - 2019.06.15 at 11h 21m 20s.xml">
+    <history-entry file="AlunoDaoTest_shouldCreateAluno - 2019.06.15 at 15h 16m 18s.xml">
       <configuration name="AlunoDaoTest.shouldCreateAluno" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlunoDaoTest_shouldCreateAluno - 2019.06.15 at 11h 22m 31s.xml">
-      <configuration name="AlunoDaoTest.shouldCreateAluno" configurationId="JUnit" />
+    <history-entry file="AlunoDaoTest_shouldUpdateAluno - 2019.06.15 at 15h 21m 46s.xml">
+      <configuration name="AlunoDaoTest.shouldUpdateAluno" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlunoDaoTest_shouldCreateAluno - 2019.06.15 at 11h 23m 05s.xml">
-      <configuration name="AlunoDaoTest.shouldCreateAluno" configurationId="JUnit" />
+    <history-entry file="AlunoDaoTest_shouldUpdateAluno - 2019.06.15 at 15h 22m 32s.xml">
+      <configuration name="AlunoDaoTest.shouldUpdateAluno" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlunoDaoTest_shouldCreateAluno - 2019.06.15 at 11h 24m 42s.xml">
-      <configuration name="AlunoDaoTest.shouldCreateAluno" configurationId="JUnit" />
+    <history-entry file="AlunoDaoTest_shouldUpdateAluno - 2019.06.15 at 15h 23m 09s.xml">
+      <configuration name="AlunoDaoTest.shouldUpdateAluno" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlunoDaoTest_shouldCreateAluno - 2019.06.15 at 11h 26m 06s.xml">
-      <configuration name="AlunoDaoTest.shouldCreateAluno" configurationId="JUnit" />
+    <history-entry file="AlunoDaoTest_shouldUpdateAluno - 2019.06.15 at 15h 23m 41s.xml">
+      <configuration name="AlunoDaoTest.shouldUpdateAluno" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlunoDaoTest_shouldCreateAluno - 2019.06.15 at 11h 34m 45s.xml">
-      <configuration name="AlunoDaoTest.shouldCreateAluno" configurationId="JUnit" />
+    <history-entry file="AlunoDaoTest_shouldUpdateAluno - 2019.06.15 at 15h 24m 02s.xml">
+      <configuration name="AlunoDaoTest.shouldUpdateAluno" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlunoDaoTest_shouldCreateAluno - 2019.06.15 at 11h 34m 57s.xml">
-      <configuration name="AlunoDaoTest.shouldCreateAluno" configurationId="JUnit" />
+    <history-entry file="AlunoDaoTest_shouldUpdateAluno - 2019.06.15 at 15h 24m 29s.xml">
+      <configuration name="AlunoDaoTest.shouldUpdateAluno" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlunoDaoTest_shouldCreateAluno - 2019.06.15 at 11h 35m 49s.xml">
-      <configuration name="AlunoDaoTest.shouldCreateAluno" configurationId="JUnit" />
+    <history-entry file="AlunoDaoTest_shouldListAlunos - 2019.06.15 at 15h 26m 55s.xml">
+      <configuration name="AlunoDaoTest.shouldListAlunos" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlunoDaoTest_shouldCreateAluno - 2019.06.15 at 11h 38m 56s.xml">
-      <configuration name="AlunoDaoTest.shouldCreateAluno" configurationId="JUnit" />
+    <history-entry file="AlunoDaoTest_shouldListAlunos - 2019.06.15 at 15h 27m 24s.xml">
+      <configuration name="AlunoDaoTest.shouldListAlunos" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AlunoDaoTest_shouldCreateAluno - 2019.06.15 at 11h 39m 11s.xml">
-      <configuration name="AlunoDaoTest.shouldCreateAluno" configurationId="JUnit" />
+    <history-entry file="AlunoDaoTest - 2019.06.15 at 15h 27m 37s.xml">
+      <configuration name="AlunoDaoTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20526000" />
+    <option name="totallyTimeSpent" value="25932000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20803443" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -475,7 +437,7 @@
       <window_info anchor="bottom" id="SonarLint" weight="0.2342932" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289256" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37172773" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5104712" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39921466" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -492,7 +454,7 @@
       <window_info anchor="right" id="Maven" order="3" weight="0.26327115" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.2159254" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.18794835" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
@@ -541,51 +503,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/tests/dao/AlunoDAOTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/tests/unity/AlunoPrintTitulo.java" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9ab33a65-928f-45f2-96ff-bf56e802b7f8/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="29" selection-start-column="29" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://9ab33a65-928f-45f2-96ff-bf56e802b7f8/schema/db_sisac_v1/table/matriculas" />
-    <entry file="das://9ab33a65-928f-45f2-96ff-bf56e802b7f8/schema/db_sisac_v1/table/tb_certificados" />
-    <entry file="file://$PROJECT_DIR$/src/dumps/db_sisac_v1_tb_exames.sql" />
-    <entry file="file://$PROJECT_DIR$/src/dumps/db_sisac_v1_tb_alunos.sql" />
-    <entry file="file://$PROJECT_DIR$/src/dumps/db_sisac_v1_tb_pagamentos.sql" />
-    <entry file="das://9ab33a65-928f-45f2-96ff-bf56e802b7f8/schema/db_sisac_v1/table/tb_alunos" />
-    <entry file="uml://DATABASE/9ab33a65-928f-45f2-96ff-bf56e802b7f8.SCHEMA:db_sisac_v1">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>9ab33a65-928f-45f2-96ff-bf56e802b7f8.SCHEMA:db_sisac_v1</OriginalElement>
-          <nodes>
-            <node x="" y="">9ab33a65-928f-45f2-96ff-bf56e802b7f8.TABLE:db_sisac_v1.tb_certificados</node>
-            <node x="" y="">9ab33a65-928f-45f2-96ff-bf56e802b7f8.TABLE:db_sisac_v1.tb_exames</node>
-            <node x="" y="">9ab33a65-928f-45f2-96ff-bf56e802b7f8.TABLE:db_sisac_v1.tb_mensalidades</node>
-            <node x="" y="">9ab33a65-928f-45f2-96ff-bf56e802b7f8.TABLE:db_sisac_v1.tb_matriculas</node>
-            <node x="" y="">9ab33a65-928f-45f2-96ff-bf56e802b7f8.TABLE:db_sisac_v1.tb_pagamentos</node>
-            <node x="" y="">9ab33a65-928f-45f2-96ff-bf56e802b7f8.TABLE:db_sisac_v1.tb_alunos</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="572.0" y="195.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://9ab33a65-928f-45f2-96ff-bf56e802b7f8/schema/db_sisac_v1/table/tb_pagamentos" />
     <entry file="das://9ab33a65-928f-45f2-96ff-bf56e802b7f8/schema/db_sisac_v1/table/tb_matriculas" />
     <entry file="file://$PROJECT_DIR$/src/main/java/sisac/dao/MatriculaDao.java" />
@@ -676,13 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/dao/CertificadoDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/test/java/daoTests/AlunoDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -699,17 +609,6 @@
           <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/dao/PagamentoDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#339#340#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -731,26 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/models/Aluno.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/dao/AlunoDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sisac/ConnectionFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-168">
@@ -763,25 +642,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sisac/helpers/DataFormatada.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
+        <state relative-caret-position="132">
           <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/src.zip!/java/io/Console.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="556" column="12" selection-start-line="556" selection-start-column="12" selection-end-line="556" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -792,10 +654,252 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://9ab33a65-928f-45f2-96ff-bf56e802b7f8/schema/db_sisac_v1/table/tb_alunos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="a9aebcb0-85ea-4fb3-aa40-bbcf390d6168">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ab33a65-928f-45f2-96ff-bf56e802b7f8/schema/db_sisac_v1/table/tb_alunos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="a9aebcb0-85ea-4fb3-aa40-bbcf390d6168">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ab33a65-928f-45f2-96ff-bf56e802b7f8/schema/db_sisac_v1/table/tb_alunos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="a9aebcb0-85ea-4fb3-aa40-bbcf390d6168">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ab33a65-928f-45f2-96ff-bf56e802b7f8/schema/db_sisac_v1/table/tb_alunos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="a9aebcb0-85ea-4fb3-aa40-bbcf390d6168">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/src.zip!/java/io/Console.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="532" column="43" lean-forward="true" selection-start-line="532" selection-start-column="43" selection-end-line="532" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/dao/CertificadoDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ab33a65-928f-45f2-96ff-bf56e802b7f8/schema/db_sisac_v1/table/tb_alunos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="a9aebcb0-85ea-4fb3-aa40-bbcf390d6168">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ab33a65-928f-45f2-96ff-bf56e802b7f8/schema/db_sisac_v1/table/tb_alunos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="a9aebcb0-85ea-4fb3-aa40-bbcf390d6168">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ab33a65-928f-45f2-96ff-bf56e802b7f8/schema/db_sisac_v1/table/tb_alunos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="a9aebcb0-85ea-4fb3-aa40-bbcf390d6168">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ab33a65-928f-45f2-96ff-bf56e802b7f8/schema/db_sisac_v1/table/tb_alunos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="a9aebcb0-85ea-4fb3-aa40-bbcf390d6168">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ab33a65-928f-45f2-96ff-bf56e802b7f8/schema/db_sisac_v1/table/tb_alunos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="a9aebcb0-85ea-4fb3-aa40-bbcf390d6168">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ab33a65-928f-45f2-96ff-bf56e802b7f8/schema/db_sisac_v1/table/tb_alunos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="a9aebcb0-85ea-4fb3-aa40-bbcf390d6168">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ab33a65-928f-45f2-96ff-bf56e802b7f8/schema/db_sisac_v1/table/tb_alunos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="a9aebcb0-85ea-4fb3-aa40-bbcf390d6168">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/src.zip!/java/util/Random.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="103" column="11" selection-start-line="103" selection-start-column="11" selection-end-line="103" selection-end-column="11" />
+          <folding>
+            <element signature="e#4501#4502#0" expanded="true" />
+            <element signature="e#4559#4560#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/src.zip!/java/lang/StringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="404" column="18" selection-start-line="404" selection-start-column="18" selection-end-line="404" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/src.zip!/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="4345" column="11" selection-start-line="4345" selection-start-column="11" selection-end-line="4345" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ab33a65-928f-45f2-96ff-bf56e802b7f8/schema/db_sisac_v1/table/tb_alunos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="a9aebcb0-85ea-4fb3-aa40-bbcf390d6168">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ab33a65-928f-45f2-96ff-bf56e802b7f8/schema/db_sisac_v1/table/tb_alunos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="a9aebcb0-85ea-4fb3-aa40-bbcf390d6168">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/dao/AlunoDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20">
+          <caret line="115" column="73" selection-start-line="115" selection-start-column="73" selection-end-line="115" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#262#263#0" expanded="true" />
+            <element signature="e#323#324#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/models/Pessoa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding>
+            <element signature="e#390#391#0" expanded="true" />
+            <element signature="e#416#417#0" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+            <element signature="e#484#485#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/models/RegistroDePagamento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="47" lean-forward="true" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+          <folding>
+            <element signature="e#170#171#0" expanded="true" />
+            <element signature="e#221#222#0" expanded="true" />
+            <element signature="e#310#311#0" expanded="true" />
+            <element signature="e#351#352#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sisac/tests/AlunoDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+        <state relative-caret-position="424">
+          <caret line="45" column="40" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/helpers/CPFGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/models/Aluno.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/dao/PagamentoDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="75" column="24" lean-forward="true" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#362#363#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://9ab33a65-928f-45f2-96ff-bf56e802b7f8/schema/db_sisac_v1/table/tb_alunos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="a9aebcb0-85ea-4fb3-aa40-bbcf390d6168">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-303">
+          <caret line="45" column="29" lean-forward="true" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

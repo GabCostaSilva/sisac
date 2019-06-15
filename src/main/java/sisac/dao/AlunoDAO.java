@@ -20,8 +20,8 @@ public class AlunoDAO {
         String sql = "INSERT INTO tb_alunos (" +
                         "nome, endereco, telefone, " +
                         "data_matricula, " +
-                        "data_matricula_fim, matriculado)" +
-                        " VALUES(?,?,?,?,?,?);";
+                        "data_matricula_fim, matriculado, faixa, cpf)" +
+                        " VALUES(?,?,?,?,?,?,?,?);";
 
         try {
             PreparedStatement stmt = createStatement(aluno, sql);
@@ -48,13 +48,15 @@ public class AlunoDAO {
         stmt.setDate(4, Date.valueOf(aluno.getDataMatricula().getData()));
         stmt.setDate(5, Date.valueOf(aluno.getDataMatricula().getData()));
         stmt.setBoolean(6, aluno.isMatriculado());
+        stmt.setString(7, aluno.getFaixa());
+        stmt.setString(8, aluno.getCpf());
 
         return stmt;
     }
 
-    public void delete(int id) {
+    public void delete(Aluno aluno) {
         String sql = String.format("DELETE FROM tb_alunos " +
-                "WHERE id=%d", id);
+                "WHERE cpf like %s", aluno.getCpf());
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
 
@@ -68,10 +70,10 @@ public class AlunoDAO {
         }
     }
 
-    public void update(Aluno aluno) {
+    public int update(Aluno aluno) {
         String sql = String.format("UPDATE tb_alunos SET nome=?, endereco=?, " +
-                "telefone=?, data_matricula=?, data_limite_matricula=?, matriculado=? " +
-                "WHERE id=%d", aluno.getId());
+                "telefone=?, data_matricula=?, data_matricula_fim=?, matriculado=?, cpf=?, faixa=?" +
+                "WHERE cpf like %s", aluno.getCpf());
         try {
            PreparedStatement stmt = createStatement(aluno, sql);
 
@@ -83,6 +85,8 @@ public class AlunoDAO {
         catch(SQLException e) {
             e.printStackTrace();
         }
+
+        return 0;
     }
 
     public List<Aluno> get() {
@@ -91,8 +95,8 @@ public class AlunoDAO {
         return createAlunos(query);
     }
 
-    public List<Aluno> findByName(String name) {
-        String query = String.format("SELECT * FROM tb_alunos WHERE name like %s", name);
+    public List<Aluno> findByCpf(String cpf) {
+        String query = String.format("SELECT * FROM tb_alunos WHERE cpf like %s", cpf);
         return createAlunos(query);
     }
 
@@ -109,20 +113,21 @@ public class AlunoDAO {
                 String endereco = rs.getString("endereco");
                 String telefone = rs.getString("telefone");
                 Date dataMatricula = rs.getDate("data_matricula");
-                Date dataLimiteMatricula = rs.getDate("data_limite_matricula");
+                Date dataLimiteMatricula = rs.getDate("data_matricula_fim");
                 boolean matriculado = rs.getBoolean("matriculado");
-
-                DataFormatada dataMatriculaAlt = new DataFormatada(dataMatricula.toLocalDate());
-                DataFormatada dataLimiteMatriculaAlt = new DataFormatada(dataLimiteMatricula.toLocalDate());
+                String faixa = rs.getString("faixa");
+                String cpf = rs.getString("cpf");
 
                 a = new Aluno();
 
                 a.setNome(nomeAluno);
                 a.setEndereco(endereco);
                 a.setTelefone(telefone);
-                a.setDataMatricula(dataMatriculaAlt);
-                a.setDataFimMatricula(dataLimiteMatriculaAlt);
+                a.setDataMatricula(new DataFormatada(dataMatricula.toLocalDate()));
+                a.setDataFimMatricula(new DataFormatada(dataLimiteMatricula.toLocalDate()));
                 a.setMatriculado(matriculado);
+                a.setCpf(cpf);
+                a.setFaixa(faixa);
 
                 alunos.add(a);
             }
