@@ -1,6 +1,6 @@
 package sisac.models;
 
-import com.sisac.helpers.DataFormatada;
+import sisac.helpers.DataFormatada;
 
 public class Exame {
     private DataFormatada dataHorario;
@@ -13,7 +13,7 @@ public class Exame {
         this.custo = custo;
     }
 
-    DataFormatada getDataHorario() {
+    public DataFormatada getDataHorario() {
         return dataHorario;
     }
 

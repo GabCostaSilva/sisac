@@ -1,7 +1,6 @@
 package sisac;
 import sisac.dao.AlunoDAO;
 import sisac.dao.ExameDao;
-import sisac.dao.MatriculaDao;
 import sisac.dao.PagamentoDAO;
 
 import java.util.Scanner;

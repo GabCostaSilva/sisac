@@ -1,6 +1,6 @@
 package sisac.models;
 
-import com.sisac.helpers.DataFormatada;
+import sisac.helpers.DataFormatada;
 
 public class Mensalidade {
 
@@ -25,6 +25,7 @@ public class Mensalidade {
     public void setId(int id) {
         this.id = id;
     }
+
     void pagar() {
         estaPaga = true;
     }

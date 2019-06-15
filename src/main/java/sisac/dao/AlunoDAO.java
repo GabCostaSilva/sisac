@@ -1,10 +1,10 @@
 package sisac.dao;
 
 import sisac.ConnectionFactory;
+import sisac.helpers.DataFormatada;
 import sisac.models.Aluno;
 
 import java.sql.*;
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class AlunoDAO {
@@ -19,8 +19,8 @@ public class AlunoDAO {
         String sql = "INSERT INTO tb_alunos (" +
                         "nome, endereco, telefone" +
                         "data_matricula, " +
-                        "data_limite_matricula)" +
-                        " VALUES(?,?,?,?,?);";
+                        "data_limite_matricula, matriculado)" +
+                        " VALUES(?,?,?,?,?,?);";
 
         try {
             PreparedStatement stmt = createStatement(aluno, sql);
@@ -31,6 +31,7 @@ public class AlunoDAO {
             System.out.println("Aluno adicionado");
             con.close();
          }
+
         catch(SQLException e) {
            e.printStackTrace();
         }
@@ -41,10 +42,11 @@ public class AlunoDAO {
         stmt.setString(1, aluno.getNome());
         stmt.setString(2, aluno.getEndereco());
         stmt.setString(3, aluno.getTelefone());
-        Date dataMatricula = Date.valueOf(aluno.getMatricula().getDataInicial());
+        Date dataMatricula = Date.valueOf(aluno.getDataMatricula().getData());
         stmt.setDate(4, dataMatricula);
-        Date dataFinal = Date.valueOf(aluno.getMatricula().getDataFinal());
+        Date dataFinal = Date.valueOf(aluno.getDataMatricula().getData());
         stmt.setDate(5, dataFinal);
+        stmt.setBoolean(6, aluno.isMatriculado());
 
         return stmt;
     }
@@ -90,23 +92,26 @@ public class AlunoDAO {
             PreparedStatement stmt = con.prepareStatement(query);
             ResultSet rs = stmt.executeQuery();
             Aluno a;
+
             while(rs.next()) {
                 String nomeAluno = rs.getString("nome");
                 String endereco = rs.getString("endereco");
                 String telefone = rs.getString("telefone");
                 Date dataMatricula = rs.getDate("data_matricula");
                 Date dataLimiteMatricula = rs.getDate("data_limite_matricula");
+                boolean matriculado = rs.getBoolean("matriculado");
 
-                LocalDate dataMatriculaAlt = dataMatricula.toLocalDate();
-                LocalDate dataLimiteMatriculaAlt = dataLimiteMatricula.toLocalDate();
+                DataFormatada dataMatriculaAlt = new DataFormatada(dataMatricula.toLocalDate());
+                DataFormatada dataLimiteMatriculaAlt = new DataFormatada(dataLimiteMatricula.toLocalDate());
 
                 a = new Aluno();
 
                 a.setNome(nomeAluno);
                 a.setEndereco(endereco);
                 a.setTelefone(telefone);
-                a.getMatricula().setDataInicial(dataMatriculaAlt);
-                a.getMatricula().setDataFinal(dataLimiteMatriculaAlt);
+                a.setDataMatricula(dataMatriculaAlt);
+                a.setDataFimMatricula(dataLimiteMatriculaAlt);
+                a.setMatriculado(matriculado);
 
                 tb_alunos.add(a);
             }
