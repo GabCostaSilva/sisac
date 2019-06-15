@@ -9,13 +9,14 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class PagamentoDAO {
-
+    private Connection con;
+    public PagamentoDAO() {
+        con = new ConnectionFactory().getConnection();
+    }
     public void create(Pagamento pagamento) {
-        Connection con = new ConnectionFactory().getConnection();
-
         String sql = "INSERT INTO tb_pagamentos (valor, data, tipo, id_aluno) VALUES(?,?,?,?);";
         try {
-            PreparedStatement stmt = createStatement(pagamento, con, sql);
+            PreparedStatement stmt = createStatement(pagamento, sql);
 
             stmt.execute();
             stmt.close();
@@ -29,7 +30,6 @@ public class PagamentoDAO {
     }
 
     public ArrayList<Pagamento> get() {
-        Connection con = new ConnectionFactory().getConnection();
         String query = "SELECT * FROM tb_pagamentos;";
         ArrayList<Pagamento> tb_pagamentos = new ArrayList<>();
 
@@ -64,14 +64,14 @@ public class PagamentoDAO {
         return tb_pagamentos;
     }
 
-    private PreparedStatement createStatement(Pagamento pagamento, Connection con, String sql) throws SQLException {
+    private PreparedStatement createStatement(Pagamento pagamento, String sql) throws SQLException {
             PreparedStatement stmt = con.prepareStatement(sql);
 
             stmt.setDouble(1, pagamento.getValor());
             Date data = Date.valueOf(pagamento.getData());
             stmt.setDate(2, data);
             stmt.setString(3, pagamento.getTipo());
-
+            stmt.setInt(4, pagamento.getAluno().getId());
             return stmt;
     }
 }
