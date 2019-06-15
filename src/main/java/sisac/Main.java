@@ -1,22 +1,22 @@
 package sisac;
-
-
-import com.sisac.dao.AlunoDAO;
-import com.sisac.dao.MatriculaDao;
-import com.sisac.dao.PagamentoDAO;
+import sisac.dao.AlunoDAO;
+import sisac.dao.ExameDao;
+import sisac.dao.MatriculaDao;
+import sisac.dao.PagamentoDAO;
 
 import java.util.Scanner;
 
-@SpringBootApplication
 public class Main {
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
 
         boolean execute = true;
-        AlunoDAO alunoDao = new AlunoDAO;
+
+        AlunoDAO alunoDao = new AlunoDAO();
         PagamentoDAO pagamentoDao = new PagamentoDAO();
-        MatriculaDao matriculaDao = new MatriculaDAO();
+        MatriculaDao matriculaDao = new MatriculaDao();
+        ExameDao exameDao = new ExameDao();
 
         System.out.println("Bem Vindo ao SISAC!\n" +
                 "***************************************");
@@ -33,21 +33,7 @@ public class Main {
             System.out.println("9 - Pagar mensalidade");
             System.out.println("10 - Gerar Relatorio de aluno");
             System.out.println("11 - Emitir certificado");
-
-            int opcao = in.nextInt();
-
-            switch (opcao)
-                case 1
-                    case 2
-                        case 3
-                            case 4
-                                case 5
-                                    case 6
-                                        case 7
-                                            case 8
-                                                case 9
-                                                    case 10
-                                                        case 11
+            System.out.println("0- Terminar");
 
 
         }

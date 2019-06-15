@@ -1,6 +1,5 @@
 package sisac.dao;
-import com.sisac.ConnectionFactory;
-import com.sisac.models.Pagamento;
+
 import sisac.ConnectionFactory;
 import sisac.helpers.DataFormatada;
 import sisac.models.Pagamento;
@@ -38,6 +37,7 @@ public class PagamentoDAO {
             PreparedStatement stmt = con.prepareStatement(query);
             ResultSet rs = stmt.executeQuery();
             Pagamento p;
+
             while(rs.next()) {
                 int id = rs.getInt("id");
                 double valor = rs.getDouble("valor");
@@ -51,9 +51,8 @@ public class PagamentoDAO {
                 p.setData(new DataFormatada(dataAux));
                 p.setTipo(tipo);
 
-                tb_pagamentos.add(a);
+                tb_pagamentos.add(p);
             }
-            // Executa statement
             stmt.execute();
             stmt.close();
             con.close();
@@ -65,7 +64,7 @@ public class PagamentoDAO {
         return tb_pagamentos;
     }
 
-    private PreparedStatement createStatement(Pagamento pagamento, Connection con, String sql) throws SQLException{
+    private PreparedStatement createStatement(Pagamento pagamento, Connection con, String sql) throws SQLException {
             PreparedStatement stmt = con.prepareStatement(sql);
 
             stmt.setDouble(1, pagamento.getValor());
