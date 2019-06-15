@@ -2,6 +2,7 @@ package sisac.dao;
 
 import sisac.ConnectionFactory;
 import sisac.helpers.DataFormatada;
+import sisac.models.Aluno;
 import sisac.models.Pagamento;
 
 import java.sql.*;
@@ -11,13 +12,14 @@ import java.util.List;
 
 public class PagamentoDAO {
     private Connection con;
+
     public PagamentoDAO() {
         con = new ConnectionFactory().getConnection();
     }
-    public void create(Pagamento pagamento) {
-        String sql = "INSERT INTO tb_pagamentos (valor, data, tipo, id_aluno) VALUES(?,?,?,?);";
+    public void create(Pagamento pagamento, Aluno aluno) {
+        String sql = "INSERT INTO tb_pagamentos (valor, data, tipo, cpf_aluno) VALUES(?,?,?,?);";
         try {
-            PreparedStatement stmt = createStatement(pagamento, sql);
+            PreparedStatement stmt = createStatement(pagamento, aluno, sql);
 
             stmt.execute();
             stmt.close();
@@ -73,6 +75,17 @@ public class PagamentoDAO {
             Date data = Date.valueOf(pagamento.getData());
             stmt.setDate(2, data);
             stmt.setString(3, pagamento.getTipo());
+            return stmt;
+    }
+
+    private PreparedStatement createStatement(Pagamento pagamento, Aluno aluno, String sql) throws SQLException {
+            PreparedStatement stmt = con.prepareStatement(sql);
+
+            stmt.setDouble(1, pagamento.getValor());
+            Date data = Date.valueOf(pagamento.getData());
+            stmt.setDate(2, data);
+            stmt.setString(3, pagamento.getTipo());
+            stmt.setString(4, aluno.getCpf());
             return stmt;
     }
 }

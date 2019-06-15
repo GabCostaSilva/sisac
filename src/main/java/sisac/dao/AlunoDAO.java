@@ -9,70 +9,84 @@ import java.util.List;
 
 public class AlunoDAO {
 
-    private Connection con;
+
 
     public AlunoDAO() {
-        con = new ConnectionFactory().getConnection();
+
     }
 
-    public int create(Aluno aluno) {
-
+    public Aluno create(Aluno aluno) {
+        Connection con = new ConnectionFactory().getConnection();
         String sql = "INSERT INTO tb_alunos (" +
                         "nome, endereco, telefone, " +
                         "data_matricula, " +
-                        "data_matricula_fim, matriculado, faixa, cpf)" +
+                        "data_matricula_fim, status, faixa, cpf)" +
                         " VALUES(?,?,?,?,?,?,?,?);";
 
         try {
             PreparedStatement stmt = createStatement(aluno, sql);
+            int affectedRows = stmt.executeUpdate();
 
-            stmt.execute();
+            if(affectedRows == 0)
+                throw new SQLException("Não foi possível criar aluno");
+
+            try (ResultSet generatedKeys = stmt.getGeneratedKeys()) {
+                if (generatedKeys.next()) {
+                    aluno.setId(generatedKeys.getLong(1));
+                }
+                else {
+                    throw new SQLException("Creating user failed, no ID obtained.");
+                }
+            }
             stmt.close();
-
-            System.out.println("Aluno adicionado");
             con.close();
          }
 
         catch(SQLException e) {
            e.printStackTrace();
         }
-
-        return 0;
+        System.out.println("Aluno adicionado");
+        return aluno;
     }
 
     private PreparedStatement createStatement(Aluno aluno, String sql) throws SQLException {
-        PreparedStatement stmt = con.prepareStatement(sql);
+        Connection con = new ConnectionFactory().getConnection();
+        PreparedStatement stmt = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
         stmt.setString(1, aluno.getNome());
         stmt.setString(2, aluno.getEndereco());
         stmt.setString(3, aluno.getTelefone());
         stmt.setDate(4, Date.valueOf(aluno.getDataMatricula().getData()));
         stmt.setDate(5, Date.valueOf(aluno.getDataMatricula().getData()));
-        stmt.setBoolean(6, aluno.isMatriculado());
+        stmt.setInt(6, aluno.getStatus());
         stmt.setString(7, aluno.getFaixa());
         stmt.setString(8, aluno.getCpf());
 
         return stmt;
     }
 
-    public void delete(Aluno aluno) {
+    public int delete(String cpf) {
+        Connection con = new ConnectionFactory().getConnection();
         String sql = String.format("DELETE FROM tb_alunos " +
-                "WHERE cpf like %s", aluno.getCpf());
+                "WHERE cpf like %s", cpf);
         try {
             PreparedStatement stmt = con.prepareStatement(sql);
 
             stmt.execute();
             stmt.close();
-            System.out.println("Aluno removido.");
             con.close();
         }
         catch(SQLException e) {
             e.printStackTrace();
         }
+        System.out.println("Aluno removido.");
+
+        return 0;
     }
 
-    public int update(Aluno aluno) {
+    public Aluno update(Aluno aluno) {
+        Connection con = new ConnectionFactory().getConnection();
         String sql = String.format("UPDATE tb_alunos SET nome=?, endereco=?, " +
-                "telefone=?, data_matricula=?, data_matricula_fim=?, matriculado=?, cpf=?, faixa=?" +
+                "telefone=?, data_matricula=?, data_matricula_fim=?, status=?, cpf=?, faixa=?" +
                 "WHERE cpf like %s", aluno.getCpf());
         try {
            PreparedStatement stmt = createStatement(aluno, sql);
@@ -86,7 +100,7 @@ public class AlunoDAO {
             e.printStackTrace();
         }
 
-        return 0;
+        return aluno;
     }
 
     public List<Aluno> get() {
@@ -96,11 +110,12 @@ public class AlunoDAO {
     }
 
     public List<Aluno> findByCpf(String cpf) {
-        String query = String.format("SELECT * FROM tb_alunos WHERE cpf like %s", cpf);
+        String query = String.format("SELECT * FROM tb_alunos WHERE cpf LIKE \"%s\"", cpf);
         return createAlunos(query);
     }
 
     private List<Aluno> createAlunos(String query) {
+        Connection con = new ConnectionFactory().getConnection();
         ArrayList<Aluno> alunos = new ArrayList<>();
 
         try(PreparedStatement stmt = con.prepareStatement(query)) {
@@ -114,7 +129,7 @@ public class AlunoDAO {
                 String telefone = rs.getString("telefone");
                 Date dataMatricula = rs.getDate("data_matricula");
                 Date dataLimiteMatricula = rs.getDate("data_matricula_fim");
-                boolean matriculado = rs.getBoolean("matriculado");
+                int status = rs.getInt("status");
                 String faixa = rs.getString("faixa");
                 String cpf = rs.getString("cpf");
 
@@ -125,7 +140,7 @@ public class AlunoDAO {
                 a.setTelefone(telefone);
                 a.setDataMatricula(new DataFormatada(dataMatricula.toLocalDate()));
                 a.setDataFimMatricula(new DataFormatada(dataLimiteMatricula.toLocalDate()));
-                a.setMatriculado(matriculado);
+                a.setStatus(status);
                 a.setCpf(cpf);
                 a.setFaixa(faixa);
 
@@ -140,8 +155,4 @@ public class AlunoDAO {
 
         return alunos;
     }
-
-
-
-
 }

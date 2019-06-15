@@ -6,6 +6,7 @@ import sisac.helpers.DataFormatada;
 import sisac.models.Aluno;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -27,12 +28,12 @@ public class Main {
             System.out.println("2 - Alterar cadastro de aluno");
             System.out.println("3 - Listar alunos");
             System.out.println("4 - Desmatricular aluno");
-            System.out.println("5 - Trancar matrícula de aluno");
-            System.out.println("6 - Destrancar matrícula de aluno");
-            System.out.println("7 - Convidar aluno para exame de aluno");
-            System.out.println("8 -  matrícula de aluno");
+            System.out.println("5 - Promover aluno");
+            System.out.println("6 - Trancar matrícula de aluno");
+            System.out.println("7 - Destrancar matrícula de aluno");
+            System.out.println("8 - Convidar aluno para exame de aluno");
             System.out.println("9 - Pagar mensalidade");
-            System.out.println("10 - Gerar Relatorio de aluno");
+            System.out.println("10 - Gerar relatorio de aluno");
             System.out.println("11 - Emitir certificado");
             System.out.println("0- Terminar");
 
@@ -42,7 +43,8 @@ public class Main {
             }catch (NumberFormatException e) {
                 e.printStackTrace();
             }
-
+            Aluno aluno;
+            List<Aluno> alunos;
             switch (option) {
                 case 0:
                     System.out.println("Encerrando.");
@@ -50,7 +52,7 @@ public class Main {
                     break;
                 case 1:
                     System.out.println("Matricular novo aluno");
-                    Aluno aluno = new Aluno();
+                     aluno = new Aluno();
                     System.out.println("Nome: ");
                     aluno.setNome(in.nextLine());
                     System.out.println("CPF: ");
@@ -68,6 +70,55 @@ public class Main {
                     alunoDao.create(aluno);
                     System.out.println();
                     break;
+                case 2:
+                    System.out.println("Atualizar cadastro de aluno");
+                    System.out.println("Digite o cpf do aluno a ser alterado");
+                    alunos = alunoDao.findByCpf(in.nextLine());
+                    break;
+                case 3:
+                    System.out.println("Lista de alunos");
+                    System.out.println("--------------------------------------------");
+                    for(Aluno a : alunoDao.get()) {
+                        System.out.println(a.toString());
+                        System.out.println("---------------------------------------");
+                    }
+                    break;
+                case 4:
+                    System.out.println("Desmatricular aluno");
+                    System.out.println("Digite o cpf do aluno a ser alterado");
+                    alunoDao.delete(in.nextLine());
+                    break;
+                case 5:
+                    System.out.println("Promover aluno");
+                    System.out.println("Digite o cpf do aluno a ser promovido");
+                    alunos = alunoDao.findByCpf(in.nextLine());
+                    aluno = alunos.get(0);
+                    aluno.promoverAluno();
+                    alunoDao.update(aluno);
+
+                    System.out.println("Aluno promovido com sucesso.");
+                    break;
+                case 6:
+                    System.out.println("Trancar matrícula de aluno");
+                case 6:
+                    System.out.println("Trancar matrícula de aluno");
+                    System.out.println("Digite o cpf do aluno a ser alterado");
+                    alunos = alunoDao.findByCpf(in.nextLine());
+                    aluno = alunos.get(0);
+                    aluno.setStatus(2);
+                    alunoDao.update(aluno);
+                    System.out.printf("A matrícula de %s foi trancada.\n", aluno.getNome());
+                    break;
+                case 7:
+                    System.out.println("Destrancar matrícula de aluno");
+                    System.out.println("Digite o cpf do aluno a ser alterado");
+                    alunos = alunoDao.findByCpf(in.nextLine());
+                    aluno = alunos.get(0);
+                    aluno.setStatus(1);
+                    alunoDao.update(aluno);
+                    System.out.printf("A matrícula de %s foi destrancada.\n", aluno.getNome());
+                    break;
+
 
                 default:
                     System.out.println("Opção inválida.");

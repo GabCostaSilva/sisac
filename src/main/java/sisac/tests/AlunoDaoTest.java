@@ -26,7 +26,9 @@ class AlunoDaoTest {
         aluno.setCpf(CPFGenerator.generate());
         aluno.setGraduacao(2);
 
-        assertEquals(0, alunoDAO.create(aluno));
+        long id = alunoDAO.create(aluno).getId();
+
+        assertEquals(aluno.getId(), id);
     }
 
     @Test void shouldUpdateAluno() {
@@ -39,7 +41,8 @@ class AlunoDaoTest {
         aluno.setCpf(CPFGenerator.generate());
         aluno.setGraduacao(2);
 
-        assertEquals(0, alunoDAO.update(aluno));
+        long id = alunoDAO.update(aluno).getId();
+        assertEquals(aluno.getId(), id);
     }
 
     @Test void shouldListAlunos(){
@@ -47,5 +50,4 @@ class AlunoDaoTest {
 
         assertNotNull(alunos);
     }
-
 }

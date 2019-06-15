@@ -35,6 +35,6 @@ public class Exame {
 
     public String convidar(Aluno aluno) {
         return String.format("Olá %s, você foi convidadado a realizar o exame no dia %s",
-                aluno.getNome(), dataHorario.getDataToString());
+                aluno.getNome(), dataHorario.toString());
     }
 }

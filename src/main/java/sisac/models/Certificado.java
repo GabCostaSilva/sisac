@@ -12,7 +12,7 @@ public class Certificado {
     public String emitir(){
         return String.format(
                 "Certificamos que %s foi graduado para a faixa %s no exame do dia %s.",
-                aluno.getNome(), aluno.getFaixa(), exame.getDataHorario().getDataToString()
+                aluno.getNome(), aluno.getFaixa(), exame.getDataHorario().toString()
         );
     }
 }

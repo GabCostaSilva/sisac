@@ -14,6 +14,7 @@ public class DataFormatada {
     }
 
     public DataFormatada(LocalDate data) {
+        this.formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         this.data = data;
     }
 
@@ -21,7 +22,7 @@ public class DataFormatada {
         return data;
     }
 
-    public String getDataToString() {
+    public String toString() {
        return data.format(formatter);
     }
 

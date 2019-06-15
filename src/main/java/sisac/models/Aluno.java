@@ -6,25 +6,33 @@ import java.util.ArrayList;
 
 public class Aluno extends Pessoa {
 
+    private long id;
+
     private RegistroDePagamento registroPagamentos;
     private ArrayList<Certificado> certificados;
     private String faixa;
     private int graduacao;
-    private DataFormatada dataMatricula;
-    private DataFormatada dataFimMatricula;
-    private boolean matriculado;
-
+   private DataFormatada dataMatricula;
+   private DataFormatada dataFimMatricula;
+    private int status; // 0 - Desmatriculado, 1 - Matriculado, 2 - Matricula Trancada
 
     public Aluno() {
         registroPagamentos = new RegistroDePagamento();
         certificados = new ArrayList<>();
-        matriculado = true;
+        status = 1;
         graduacao = 0;
     }
 
+    public void setStatus(int status) {
+        this.status = status;
+    }
 
-    public boolean isMatriculado() {
-        return matriculado;
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public void setCertificados(ArrayList<Certificado> certificados) {
@@ -48,9 +56,6 @@ public class Aluno extends Pessoa {
         this.dataFimMatricula = dataFimMatricula;
     }
 
-    public void setMatriculado(boolean matriculado) {
-        this.matriculado = matriculado;
-    }
 
     public String getFaixa() {
         return faixa;
@@ -71,17 +76,38 @@ public class Aluno extends Pessoa {
     }
 
     public void trancarMatricula() {
-        matriculado = false;
+        status = 2;
     }
 
     public void destrancarMatricula() {
-        matriculado = true;
+        status = 1;
     }
 
     public DataFormatada getDataMatricula() {
         return dataMatricula;
     }
 
+    public int getStatus() {
+        return status;
+    }
+
+    public String getStatusToString() {
+        String stat = "Matriculado";
+        switch (status) {
+            case 0:
+                stat = "Desmatriculado";
+                break;
+            case 1:
+                stat = "Matriculado";
+                break;
+            case 2:
+                stat = "Matrícula trancada";
+                break;
+            default:
+                break;
+        }
+        return stat;
+    }
     public DataFormatada getDataFimMatricula() {
         return dataFimMatricula;
     }
@@ -90,6 +116,19 @@ public class Aluno extends Pessoa {
         return certificados;
     }
 
+    public String toString() {
+        return String.format(
+                "Nome: %s\n" +
+                "CPF: %s\n" +
+                "Data matricula %s\n" +
+                "Faixa: %s\n" +
+                "Endereco: %s\n" +
+                "Telefone: %s\n" +
+                "Status: %s\n",
+                this.getNome(), this.getCpf(), getDataMatricula().toString(), getFaixa(),
+                this.getEndereco(), this.getTelefone(), getStatus()
+        );
+    }
 }
 
 

@@ -4127,7 +4127,7 @@
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="576" parent="230" name="matriculado">
+    <column id="576" parent="230" name="status">
       <Position>7</Position>
       <DataType>tinyint(4)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
