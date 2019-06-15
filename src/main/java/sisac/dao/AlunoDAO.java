@@ -3,11 +3,11 @@ package sisac.dao;
 import sisac.ConnectionFactory;
 import sisac.helpers.DataFormatada;
 import sisac.models.Aluno;
-
 import java.sql.*;
 import java.util.ArrayList;
 
 public class AlunoDAO {
+
     private Connection con;
 
     public AlunoDAO() {
@@ -69,7 +69,7 @@ public class AlunoDAO {
 
     public void update(Aluno aluno) {
         String sql = String.format("UPDATE tb_alunos SET nome=?, endereco=?, " +
-                "telefone=?, data_matricula=?, data_limite_matricula=? " +
+                "telefone=?, data_matricula=?, data_limite_matricula=?, matriculado=? " +
                 "WHERE id=%d", aluno.getId());
         try {
            PreparedStatement stmt = createStatement(aluno, sql);

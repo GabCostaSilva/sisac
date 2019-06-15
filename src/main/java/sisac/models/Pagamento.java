@@ -1,21 +1,14 @@
 package sisac.models;
-
-
 import sisac.helpers.DataFormatada;
-
 import java.time.LocalDate;
 
 public class Pagamento {
+
     private int id;
-    private Mensalidade mensalidade;
     private double valor;
     private DataFormatada data;
     private Aluno aluno;
     private int tipo;
-
-    public void setMensalidade(Mensalidade mensalidade) {
-        this.mensalidade = mensalidade;
-    }
 
     public void setData(DataFormatada data) {
         this.data = data;
@@ -40,11 +33,10 @@ public class Pagamento {
         return aluno;
     }
 
-    public Pagamento(Aluno aluno, double valor, DataFormatada data, int tipo, Mensalidade mensalidade) {
+    public Pagamento(Aluno aluno, double valor, DataFormatada data, int tipo) {
         this.valor = valor;
         this.data = data;
         this.tipo = tipo;
-        this.mensalidade = mensalidade;
         this.aluno = aluno;
     }
 
@@ -69,10 +61,6 @@ public class Pagamento {
 
     public int getId() {
         return id;
-    }
-
-    public Mensalidade getMensalidade() {
-        return mensalidade;
     }
 
     public void setId(int id) {

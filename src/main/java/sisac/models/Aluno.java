@@ -24,6 +24,7 @@ public class Aluno extends Pessoa {
     public boolean isMatriculado() {
         return matriculado;
     }
+
     public void setCertificados(ArrayList<Certificado> certificados) {
         this.certificados = certificados;
     }
