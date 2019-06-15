@@ -98,8 +98,7 @@ public class Main {
 
                     System.out.println("Aluno promovido com sucesso.");
                     break;
-                case 6:
-                    System.out.println("Trancar matrícula de aluno");
+
                 case 6:
                     System.out.println("Trancar matrícula de aluno");
                     System.out.println("Digite o cpf do aluno a ser alterado");

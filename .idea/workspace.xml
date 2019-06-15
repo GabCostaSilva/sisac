@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c18a0269-5190-4094-bc44-c5dd9f27f93a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sisac/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/dao/AlunoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sisac/dao/AlunoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/dao/PagamentoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sisac/dao/PagamentoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/helpers/DataFormatada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sisac/helpers/DataFormatada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/models/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sisac/models/Aluno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/models/Certificado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sisac/models/Certificado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/models/Exame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sisac/models/Exame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/tests/AlunoDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sisac/tests/AlunoDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sisac/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sisac/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sisac/dao/AlunoDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sisac/dao/AlunoDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sisac/dao/PagamentoDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sisac/dao/PagamentoDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sisac/models/Aluno.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sisac/models/Aluno.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sisac/tests/AlunoDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sisac/tests/AlunoDaoTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="c18a0269-5190-4094-bc44-c5dd9f27f93a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,26 +31,6 @@
         <item name="sisac" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="sisac" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="db_sisac_v1: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="sisac" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="db_sisac_v1: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="tb_alunos: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="sisac" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="db_sisac_v1: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="tb_pagamentos: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -77,8 +42,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/sisac/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1807">
-              <caret line="97" column="20" selection-start-line="97" selection-start-column="20" selection-end-line="97" selection-end-column="20" />
+            <state relative-caret-position="1879">
+              <caret line="97" selection-start-line="97" selection-end-line="97" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -435,7 +400,7 @@
       <workItem from="1560562618734" duration="2524000" />
       <workItem from="1560569001232" duration="5442000" />
       <workItem from="1560606989821" duration="2086000" />
-      <workItem from="1560609138706" duration="16956000" />
+      <workItem from="1560609138706" duration="17417000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1560565456945</created>
@@ -480,13 +445,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33188000" />
+    <option name="totallyTimeSpent" value="33649000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21969697" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20803443" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -498,13 +463,13 @@
       <window_info anchor="bottom" id="SonarLint" weight="0.2342932" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289256" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30743802" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30628273" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3983471" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Console" order="7" weight="0.32853404" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49848485" weight="0.22479339" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49848485" weight="0.22382198" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50151515" side_tool="true" weight="0.5355372" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
@@ -515,7 +480,7 @@
       <window_info anchor="right" id="Maven" order="3" weight="0.26327115" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.3530303" />
+      <window_info active="true" anchor="right" id="Database" order="6" visible="true" weight="0.3529412" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
@@ -1001,8 +966,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sisac/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1807">
-          <caret line="97" column="20" selection-start-line="97" selection-start-column="20" selection-end-line="97" selection-end-column="20" />
+        <state relative-caret-position="1879">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
