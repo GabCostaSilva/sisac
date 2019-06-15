@@ -19,7 +19,7 @@ public class AlunoDAO {
         String sql = "INSERT INTO tb_alunos (" +
                         "nome, endereco, telefone" +
                         "data_matricula, " +
-                        "data_limite_matricula, matriculado)" +
+                        "data_matricula_fim, matriculado)" +
                         " VALUES(?,?,?,?,?,?);";
 
         try {

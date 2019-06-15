@@ -27,6 +27,8 @@ CREATE TABLE `tb_alunos` (
   `nome` varchar(255) DEFAULT NULL,
   `endereco` varchar(255) DEFAULT NULL,
   `telefone` varchar(255) DEFAULT NULL,
+  `data_matricula` date DEFAULT NULL,
+  `data_matricula_fim` date DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -96,34 +98,6 @@ LOCK TABLES `tb_exames` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `tb_matriculas`
---
-
-DROP TABLE IF EXISTS `tb_matriculas`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tb_matriculas` (
-  `data_inicial` date DEFAULT NULL,
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `data_final` date DEFAULT NULL,
-  `status` varchar(255) DEFAULT NULL,
-  `id_aluno` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `matriculas_id_aluno_uindex` (`id_aluno`),
-  CONSTRAINT `matriculas_tb_alunos_id_fk` FOREIGN KEY (`id_aluno`) REFERENCES `tb_alunos` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `tb_matriculas`
---
-
-LOCK TABLES `tb_matriculas` WRITE;
-/*!40000 ALTER TABLE `tb_matriculas` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tb_matriculas` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `tb_mensalidades`
 --
 
@@ -190,4 +164,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-13 21:57:23
+-- Dump completed on 2019-06-15  1:03:36
