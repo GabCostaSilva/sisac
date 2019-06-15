@@ -7,6 +7,7 @@ import sisac.models.Pagamento;
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
 public class PagamentoDAO {
     private Connection con;
@@ -21,6 +22,7 @@ public class PagamentoDAO {
             stmt.execute();
             stmt.close();
 
+
             System.out.println("Pagamento efetuado");
             con.close();
          }
@@ -29,9 +31,9 @@ public class PagamentoDAO {
         }
     }
 
-    public ArrayList<Pagamento> get() {
+    public List<Pagamento> get() {
         String query = "SELECT * FROM tb_pagamentos;";
-        ArrayList<Pagamento> tb_pagamentos = new ArrayList<>();
+        List<Pagamento> tb_pagamentos = new ArrayList();
 
         try {
             PreparedStatement stmt = con.prepareStatement(query);

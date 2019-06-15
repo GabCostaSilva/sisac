@@ -9,7 +9,7 @@ public class DataFormatada {
     private DateTimeFormatter formatter;
 
     public DataFormatada(String data) {
-        this.formatter = DateTimeFormatter.ofPattern("dd-MM-uuuu");
+        this.formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         this.data = LocalDate.parse(data, formatter);
     }
 

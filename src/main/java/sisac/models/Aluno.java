@@ -18,8 +18,10 @@ public class Aluno extends Pessoa {
     public Aluno() {
         registroPagamentos = new RegistroDePagamento(id);
         certificados = new ArrayList<>();
+        matriculado = true;
         graduacao = 0;
     }
+
 
     public boolean isMatriculado() {
         return matriculado;

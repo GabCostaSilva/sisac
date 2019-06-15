@@ -5,6 +5,7 @@ import sisac.helpers.DataFormatada;
 import sisac.models.Aluno;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class AlunoDAO {
 
@@ -14,10 +15,10 @@ public class AlunoDAO {
         con = new ConnectionFactory().getConnection();
     }
 
-    public void create(Aluno aluno) {
+    public int create(Aluno aluno) {
 
         String sql = "INSERT INTO tb_alunos (" +
-                        "nome, endereco, telefone" +
+                        "nome, endereco, telefone, " +
                         "data_matricula, " +
                         "data_matricula_fim, matriculado)" +
                         " VALUES(?,?,?,?,?,?);";
@@ -35,6 +36,8 @@ public class AlunoDAO {
         catch(SQLException e) {
            e.printStackTrace();
         }
+
+        return 0;
     }
 
     private PreparedStatement createStatement(Aluno aluno, String sql) throws SQLException {
@@ -42,10 +45,8 @@ public class AlunoDAO {
         stmt.setString(1, aluno.getNome());
         stmt.setString(2, aluno.getEndereco());
         stmt.setString(3, aluno.getTelefone());
-        Date dataMatricula = Date.valueOf(aluno.getDataMatricula().getData());
-        stmt.setDate(4, dataMatricula);
-        Date dataFinal = Date.valueOf(aluno.getDataMatricula().getData());
-        stmt.setDate(5, dataFinal);
+        stmt.setDate(4, Date.valueOf(aluno.getDataMatricula().getData()));
+        stmt.setDate(5, Date.valueOf(aluno.getDataMatricula().getData()));
         stmt.setBoolean(6, aluno.isMatriculado());
 
         return stmt;
@@ -84,12 +85,22 @@ public class AlunoDAO {
         }
     }
 
-    public ArrayList<Aluno> get() {
+    public List<Aluno> get() {
         String query = "SELECT * FROM tb_alunos";
-        ArrayList<Aluno> tb_alunos = new ArrayList<>();
 
-        try {
-            PreparedStatement stmt = con.prepareStatement(query);
+        return createAlunos(query);
+    }
+
+    public List<Aluno> findByName(String name) {
+        String query = String.format("SELECT * FROM tb_alunos WHERE name like %s", name);
+        return createAlunos(query);
+    }
+
+    private List<Aluno> createAlunos(String query) {
+        ArrayList<Aluno> alunos = new ArrayList<>();
+
+        try(PreparedStatement stmt = con.prepareStatement(query)) {
+
             ResultSet rs = stmt.executeQuery();
             Aluno a;
 
@@ -113,16 +124,19 @@ public class AlunoDAO {
                 a.setDataFimMatricula(dataLimiteMatriculaAlt);
                 a.setMatriculado(matriculado);
 
-                tb_alunos.add(a);
+                alunos.add(a);
             }
             stmt.execute();
-            stmt.close();
             con.close();
         }
         catch(SQLException e) {
             e.printStackTrace();
         }
 
-        return tb_alunos;
+        return alunos;
     }
+
+
+
+
 }

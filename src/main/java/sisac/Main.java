@@ -14,7 +14,6 @@ public class Main {
 
         AlunoDAO alunoDao = new AlunoDAO();
         PagamentoDAO pagamentoDao = new PagamentoDAO();
-        MatriculaDao matriculaDao = new MatriculaDao();
         ExameDao exameDao = new ExameDao();
 
         System.out.println("Bem Vindo ao SISAC!\n" +
