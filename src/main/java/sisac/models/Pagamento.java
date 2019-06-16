@@ -3,24 +3,11 @@ import sisac.helpers.DataFormatada;
 import java.time.LocalDate;
 
 public class Pagamento {
-
-    private int id;
+    private long id;
     private double valor;
     private DataFormatada data;
-    private Aluno aluno;
+    private final int[] tipos = {0, 1}; // 0 - Cartão, 1 - dinheiro
     private int tipo;
-
-    public void setData(DataFormatada data) {
-        this.data = data;
-    }
-
-    public void setAluno(Aluno aluno) {
-        this.aluno = aluno;
-    }
-
-    public void setTipo(int tipo) {
-        this.tipo = tipo;
-    }
 
     public Pagamento() {
     }
@@ -29,17 +16,27 @@ public class Pagamento {
         this.valor = valor;
     }
 
-    public Aluno getAluno() {
-        return aluno;
+    public void setData(DataFormatada data) {
+        this.data = data;
     }
 
-    public Pagamento(Aluno aluno, double valor, DataFormatada data, int tipo) {
+    public Pagamento(double valor, DataFormatada data, int tipo) {
         this.valor = valor;
         this.data = data;
-        this.tipo = tipo;
-        this.aluno = aluno;
+        try {
+            this.tipo = tipos[tipo];
+        } catch(IndexOutOfBoundsException e) {
+            throw new IndexOutOfBoundsException("O tipo deve ser 0 ou 1");
+        }
     }
 
+    public void setTipo(int tipo) {
+        this.tipo = tipo;
+    }
+
+    public int getTipo() {
+        return tipo;
+    }
     public double getValor() {
         return valor;
     }
@@ -52,18 +49,11 @@ public class Pagamento {
         return data;
     }
 
-    public String getTipo() {
-        if(tipo == 0)
-            return "Dinheiro";
-
-        return "Cartão";
-    }
-
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 }

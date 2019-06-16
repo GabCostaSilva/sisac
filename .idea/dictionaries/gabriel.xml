@@ -5,7 +5,10 @@
       <w>alunos</w>
       <w>inicial</w>
       <w>matricula</w>
+      <w>pagamento</w>
       <w>pagamentos</w>
+      <w>tipo</w>
+      <w>tipos</w>
     </words>
   </dictionary>
 </component>

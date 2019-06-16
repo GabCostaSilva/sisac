@@ -4,6 +4,7 @@ import sisac.dao.ExameDao;
 import sisac.dao.PagamentoDAO;
 import sisac.helpers.DataFormatada;
 import sisac.models.Aluno;
+import sisac.models.Pagamento;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -31,7 +32,7 @@ public class Main {
             System.out.println("5 - Promover aluno");
             System.out.println("6 - Trancar matrícula de aluno");
             System.out.println("7 - Destrancar matrícula de aluno");
-            System.out.println("8 - Convidar aluno para exame de aluno");
+            System.out.println("8 - Convidar aluno para exame de faixa");
             System.out.println("9 - Pagar mensalidade");
             System.out.println("10 - Gerar relatorio de aluno");
             System.out.println("11 - Emitir certificado");
@@ -41,7 +42,8 @@ public class Main {
             try {
                 option = Integer.parseInt(in.nextLine());
             }catch (NumberFormatException e) {
-                e.printStackTrace();
+                System.out.println("Tente novamente.");
+                continue;
             }
             Aluno aluno;
             List<Aluno> alunos;
@@ -50,6 +52,7 @@ public class Main {
                     System.out.println("Encerrando.");
                     execute = false;
                     break;
+
                 case 1:
                     System.out.println("Matricular novo aluno");
                      aluno = new Aluno();
@@ -70,11 +73,13 @@ public class Main {
                     alunoDao.create(aluno);
                     System.out.println();
                     break;
+
                 case 2:
                     System.out.println("Atualizar cadastro de aluno");
                     System.out.println("Digite o cpf do aluno a ser alterado");
                     alunos = alunoDao.findByCpf(in.nextLine());
                     break;
+
                 case 3:
                     System.out.println("Lista de alunos");
                     System.out.println("--------------------------------------------");
@@ -83,11 +88,13 @@ public class Main {
                         System.out.println("---------------------------------------");
                     }
                     break;
+
                 case 4:
                     System.out.println("Desmatricular aluno");
                     System.out.println("Digite o cpf do aluno a ser alterado");
                     alunoDao.delete(in.nextLine());
                     break;
+
                 case 5:
                     System.out.println("Promover aluno");
                     System.out.println("Digite o cpf do aluno a ser promovido");
@@ -99,7 +106,6 @@ public class Main {
                     System.out.println("Aluno promovido com sucesso.");
                     break;
 
-
                 case 6:
                     System.out.println("Trancar matrícula de aluno");
                     System.out.println("Digite o cpf do aluno a ser alterado");
@@ -109,6 +115,7 @@ public class Main {
                     alunoDao.update(aluno);
                     System.out.printf("A matrícula de %s foi trancada.\n", aluno.getNome());
                     break;
+
                 case 7:
                     System.out.println("Destrancar matrícula de aluno");
                     System.out.println("Digite o cpf do aluno a ser alterado");
@@ -119,6 +126,48 @@ public class Main {
                     System.out.printf("A matrícula de %s foi destrancada.\n", aluno.getNome());
                     break;
 
+                case 8:
+                    System.out.println("Digite o cpf do aluno a ser convidado para o exame");
+                    alunos = alunoDao.findByCpf(in.nextLine());
+                    System.out.printf("Email com convite enviado à %s\n", alunos.get(0).getNome());
+                    break;
+
+                case 9:
+                    System.out.println("Efetuar Pagamento");
+                    Pagamento pagamento = new Pagamento();
+                    System.out.println("Tipo do pagamento (0 - Cartão, 1 - Dinheiro)");
+
+                    int tipo = 0;
+                    try {
+                        tipo = Integer.parseInt(in.nextLine());
+                    }catch (NumberFormatException e) {
+                        e.printStackTrace();
+                    }
+
+                    pagamento.setTipo(tipo);
+                    System.out.println("Valor do pagamento: ");
+
+                    double valor = 0;
+                    try {
+                        valor = Integer.parseInt(in.nextLine());
+                    }catch (NumberFormatException e) {
+                        e.printStackTrace();
+                    }
+                    pagamento.setValor(valor);
+                    pagamento.setData(new DataFormatada(LocalDate.now()));
+
+                    System.out.println("Digite o cpf do aluno que efetuou o pagamento:");
+                    alunos = alunoDao.findByCpf(in.nextLine());
+                    try {
+                        aluno = alunos.get(0);
+                    } catch (IndexOutOfBoundsException e) {
+                        System.out.println("Aluno não encontrado, tente novamente");
+                        break;
+                    }
+
+                    aluno.pagarMensalidade(pagamento);
+                    System.out.println("Pagamento efetuado com sucesso.");
+                    break;
 
                 default:
                     System.out.println("Opção inválida.");

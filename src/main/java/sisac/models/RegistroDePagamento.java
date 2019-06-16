@@ -1,22 +1,19 @@
 package sisac.models;
 
+import sisac.dao.PagamentoDAO;
+
 import java.util.ArrayList;
 
 public class RegistroDePagamento {
 
-    private ArrayList<Pagamento> pagamentos;
-    private Aluno aluno;
+    private PagamentoDAO pagamentoDAO;
 
     RegistroDePagamento() {
-        this.pagamentos = new ArrayList<>();
+        this.pagamentoDAO = new PagamentoDAO();
     }
 
     void adicionaPagamento(Pagamento pagamento) {
-        pagamentos.add(pagamento);
-    }
-
-    ArrayList<Pagamento> getPagamentos() {
-        return pagamentos;
+        pagamentoDAO.create(pagamento);
     }
 
 }

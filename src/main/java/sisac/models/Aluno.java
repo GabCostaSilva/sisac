@@ -66,7 +66,6 @@ public class Aluno extends Pessoa {
     }
 
     public void pagarMensalidade(Pagamento pagamento) {
-
         registroPagamentos.adicionaPagamento(pagamento);
     }
 
