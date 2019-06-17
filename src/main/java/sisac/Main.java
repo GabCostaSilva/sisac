@@ -4,6 +4,7 @@ import sisac.dao.ExameDao;
 import sisac.dao.PagamentoDAO;
 import sisac.helpers.DataFormatada;
 import sisac.models.Aluno;
+import sisac.models.Certificado;
 import sisac.models.Pagamento;
 
 import java.time.LocalDate;
@@ -18,13 +19,14 @@ public class Main {
         boolean execute = true;
 
         AlunoDAO alunoDao = new AlunoDAO();
-        PagamentoDAO pagamentoDao = new PagamentoDAO();
-        ExameDao exameDao = new ExameDao();
 
+        System.out.println("\n***************************************");
         System.out.println("Bem Vindo ao SISAC!\n" +
                 "***************************************");
         while(execute) {
+            System.out.println();
             System.out.println("Escolha uma opção");
+            System.out.println();
             System.out.println("1 - Matricular novo aluno");
             System.out.println("2 - Alterar cadastro de aluno");
             System.out.println("3 - Listar alunos");
@@ -37,7 +39,7 @@ public class Main {
             System.out.println("10 - Gerar relatorio de aluno");
             System.out.println("11 - Emitir certificado");
             System.out.println("0- Terminar");
-
+            System.out.println();
             int option = 0;
             try {
                 option = Integer.parseInt(in.nextLine());
@@ -71,13 +73,15 @@ public class Main {
                     aluno.setDataMatricula(new DataFormatada(LocalDate.now()));
 
                     alunoDao.create(aluno);
-                    System.out.println();
+                    System.out.println("Aluno matriculado com sucesso.");
                     break;
 
                 case 2:
                     System.out.println("Atualizar cadastro de aluno");
                     System.out.println("Digite o cpf do aluno a ser alterado");
                     alunos = alunoDao.findByCpf(in.nextLine());
+                    aluno = alunos.get(0);
+                    System.out.println(aluno.toString());
                     break;
 
                 case 3:
@@ -91,8 +95,9 @@ public class Main {
 
                 case 4:
                     System.out.println("Desmatricular aluno");
-                    System.out.println("Digite o cpf do aluno a ser alterado");
+                    System.out.println("Digite o cpf do aluno a ser desmatriculado");
                     alunoDao.delete(in.nextLine());
+                    System.out.println("Aluno desmatriculado com sucesso.");
                     break;
 
                 case 5:
@@ -164,10 +169,36 @@ public class Main {
                         System.out.println("Aluno não encontrado, tente novamente");
                         break;
                     }
-
+                    pagamento.setIdAluno(aluno.getId());
                     aluno.pagarMensalidade(pagamento);
                     System.out.println("Pagamento efetuado com sucesso.");
                     break;
+
+                case 10:
+                    System.out.println("Digite o cpf do aluno a ser gerado relatório");
+                    alunos = alunoDao.findByCpf(in.nextLine());
+                    try {
+                        aluno = alunos.get(0);
+                    } catch (IndexOutOfBoundsException e) {
+                        System.out.println("Aluno não encontrado, tente novamente");
+                        break;
+                    }
+
+                    for(Pagamento p : aluno.getRegistroPagamentos().getPagamentos()){
+                        System.out.println(p.toString());
+                    }
+                    break;
+
+                case 11:
+                    System.out.println("Digite o cpf do aluno a ser gerado certificado");
+                    alunos = alunoDao.findByCpf(in.nextLine());
+                    try {
+                        aluno = alunos.get(0);
+                    } catch (IndexOutOfBoundsException e) {
+                        System.out.println("Aluno não encontrado, tente novamente");
+                        break;
+                    }
+                   aluno.adicionarCertificado(new Certificado(aluno));
 
                 default:
                     System.out.println("Opção inválida.");

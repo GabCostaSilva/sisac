@@ -2,17 +2,15 @@ package sisac.models;
 
 public class Certificado {
     public Aluno aluno;
-    private Exame exame;
 
-    public Certificado(Aluno aluno, Exame exame) {
+    public Certificado(Aluno aluno) {
         this.aluno = aluno;
-        this.exame = exame;
     }
 
-    public String emitir(){
+    public String toString(){
         return String.format(
-                "Certificamos que %s foi graduado para a faixa %s no exame do dia %s.",
-                aluno.getNome(), aluno.getFaixa(), exame.getDataHorario().toString()
+                "Certificamos que %s foi graduado para a faixa %s",
+                aluno.getNome(), aluno.getFaixa()
         );
     }
 }

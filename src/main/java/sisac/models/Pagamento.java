@@ -8,6 +8,15 @@ public class Pagamento {
     private DataFormatada data;
     private final int[] tipos = {0, 1}; // 0 - Cartão, 1 - dinheiro
     private int tipo;
+    private long idAluno;
+
+    public long getIdAluno() {
+        return idAluno;
+    }
+
+    public void setIdAluno(long idAluno) {
+        this.idAluno = idAluno;
+    }
 
     public Pagamento() {
     }
@@ -55,5 +64,21 @@ public class Pagamento {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String getTipoToString(){
+        if(tipo == 0)
+            return "Cartão";
+        return "Dinheiro";
+    }
+
+    public String toString(){
+        return String.format(
+                "Valor: %.2f\n" +
+                "Data: %s\n" +
+                "Tipo: %s\n" +
+                "-----------------------------------------\n",
+                getValor(), getData().toString(), getTipoToString()
+        );
     }
 }

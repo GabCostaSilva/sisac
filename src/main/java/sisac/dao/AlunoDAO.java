@@ -7,14 +7,11 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AlunoDAO {
-
-
+public class AlunoDAO{
 
     public AlunoDAO() {
 
     }
-
     public Aluno create(Aluno aluno) {
         Connection con = new ConnectionFactory().getConnection();
         String sql = "INSERT INTO tb_alunos (" +
@@ -45,24 +42,10 @@ public class AlunoDAO {
         catch(SQLException e) {
            e.printStackTrace();
         }
-        System.out.println("Aluno adicionado");
         return aluno;
     }
 
-    private PreparedStatement createStatement(Aluno aluno, String sql) throws SQLException {
-        Connection con = new ConnectionFactory().getConnection();
-        PreparedStatement stmt = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-        stmt.setString(1, aluno.getNome());
-        stmt.setString(2, aluno.getEndereco());
-        stmt.setString(3, aluno.getTelefone());
-        stmt.setDate(4, Date.valueOf(aluno.getDataMatricula().getData()));
-        stmt.setDate(5, Date.valueOf(aluno.getDataMatricula().getData()));
-        stmt.setInt(6, aluno.getStatus());
-        stmt.setString(7, aluno.getFaixa());
-        stmt.setString(8, aluno.getCpf());
 
-        return stmt;
-    }
 
     public int delete(String cpf) {
         Connection con = new ConnectionFactory().getConnection();
@@ -78,7 +61,6 @@ public class AlunoDAO {
         catch(SQLException e) {
             e.printStackTrace();
         }
-        System.out.println("Aluno removido.");
 
         return 0;
     }
@@ -93,7 +75,6 @@ public class AlunoDAO {
 
             stmt.execute();
             stmt.close();
-            System.out.println("Aluno atualizado");
             con.close();
         }
         catch(SQLException e) {
@@ -111,6 +92,7 @@ public class AlunoDAO {
 
     public List<Aluno> findByCpf(String cpf) {
         String query = String.format("SELECT * FROM tb_alunos WHERE cpf LIKE \"%s\"", cpf);
+
         return createAlunos(query);
     }
 
@@ -132,6 +114,7 @@ public class AlunoDAO {
                 int status = rs.getInt("status");
                 String faixa = rs.getString("faixa");
                 String cpf = rs.getString("cpf");
+                long id = rs.getLong("id");
 
                 a = new Aluno();
 
@@ -143,6 +126,7 @@ public class AlunoDAO {
                 a.setStatus(status);
                 a.setCpf(cpf);
                 a.setFaixa(faixa);
+                a.setId(id);
 
                 alunos.add(a);
             }
@@ -154,5 +138,20 @@ public class AlunoDAO {
         }
 
         return alunos;
+    }
+
+    private PreparedStatement createStatement(Aluno aluno, String sql) throws SQLException {
+        Connection con = new ConnectionFactory().getConnection();
+        PreparedStatement stmt = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+        stmt.setString(1, aluno.getNome());
+        stmt.setString(2, aluno.getEndereco());
+        stmt.setString(3, aluno.getTelefone());
+        stmt.setDate(4, Date.valueOf(aluno.getDataMatricula().getData()));
+        stmt.setDate(5, Date.valueOf(aluno.getDataMatricula().getData()));
+        stmt.setInt(6, aluno.getStatus());
+        stmt.setString(7, aluno.getFaixa());
+        stmt.setString(8, aluno.getCpf());
+
+        return stmt;
     }
 }

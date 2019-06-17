@@ -18,7 +18,7 @@ public class PagamentoDAO {
     public Pagamento create(Pagamento pagamento) {
         Connection con = new ConnectionFactory().getConnection();
 
-        String sql = "INSERT INTO tb_pagamentos (valor, data, tipo) VALUES(?,?,?);";
+        String sql = "INSERT INTO tb_pagamentos (valor, data, tipo, id_aluno) VALUES(?,?,?,?);";
         try {
             PreparedStatement stmt = createStatement(pagamento, sql);
 
@@ -42,8 +42,6 @@ public class PagamentoDAO {
         catch(SQLException e) {
            e.printStackTrace();
         }
-        System.out.println("Pagamento efetuado");
-
         return pagamento;
     }
 
@@ -82,6 +80,36 @@ public class PagamentoDAO {
         return tb_pagamentos;
     }
 
+    public List<Pagamento> findByAlunoId(Aluno aluno) {
+        Connection con = new ConnectionFactory().getConnection();
+        ArrayList<Pagamento> pagamentos = new ArrayList<>();
+
+        String sql = String.format("SELECT * FROM tb_pagamentos " +
+                "WHERE id_aluno=%d;", aluno.getId());
+
+        try(PreparedStatement stmt = con.prepareStatement(sql)) {
+
+            ResultSet rs = stmt.executeQuery();
+
+            Pagamento p;
+
+            while(rs.next()){
+                p = new Pagamento();
+                p.setData(new DataFormatada(rs.getDate("data").toLocalDate()));
+                p.setValor(rs.getDouble("valor"));
+                p.setTipo(rs.getInt("tipo"));
+                p.setId(rs.getLong("id"));
+
+                pagamentos.add(p);
+            }
+
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return pagamentos;
+    }
+
     private PreparedStatement createStatement(Pagamento pagamento, String sql) throws SQLException {
         Connection con = new ConnectionFactory().getConnection();
         PreparedStatement stmt = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -90,6 +118,7 @@ public class PagamentoDAO {
         Date data = Date.valueOf(pagamento.getData());
         stmt.setDate(2, data);
         stmt.setInt(3, pagamento.getTipo());
+        stmt.setLong(4, pagamento.getIdAluno());
         return stmt;
     }
 }

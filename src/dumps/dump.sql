@@ -34,7 +34,7 @@ CREATE TABLE `tb_alunos` (
   `faixa` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `tb_alunos_cpf_uindex` (`cpf`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +43,7 @@ CREATE TABLE `tb_alunos` (
 
 LOCK TABLES `tb_alunos` WRITE;
 /*!40000 ALTER TABLE `tb_alunos` DISABLE KEYS */;
-INSERT INTO `tb_alunos` (`id`, `nome`, `endereco`, `telefone`, `data_matricula`, `data_matricula_fim`, `status`, `cpf`, `faixa`) VALUES (7,'João das Neves','Rua da Amargura, São Paulo - SP','1199933333','2010-12-12','2010-12-12',1,'42582367215','Laranja'),(23,'João das Neves','Rua da Amargura, São Paulo - SP','1199933333','2010-12-12','2010-12-12',1,'75270658623','Laranja'),(24,'João das Neves','Rua da Amargura, São Paulo - SP','1199933333','2010-12-12','2010-12-12',1,'00857848738','Laranja');
+INSERT INTO `tb_alunos` (`id`, `nome`, `endereco`, `telefone`, `data_matricula`, `data_matricula_fim`, `status`, `cpf`, `faixa`) VALUES (7,'João das Neves','Rua da Amargura, São Paulo - SP','1199933333','2010-12-12','2010-12-12',1,'42582367215','Laranja'),(23,'João das Neves','Rua da Amargura, São Paulo - SP','1199933333','2010-12-12','2010-12-12',1,'75270658623','Laranja'),(24,'João das Neves','Rua da Amargura, São Paulo - SP','1199933333','2010-12-12','2010-12-12',1,'00857848738','Laranja'),(25,'jonas','ruaadfadf','2934234234','2019-06-16','2019-06-16',1,'4323423424','azul'),(26,'Joao','Rua Marte','434343434','2019-06-16','2019-06-16',1,'42345908866','preta');
 /*!40000 ALTER TABLE `tb_alunos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -114,13 +114,11 @@ CREATE TABLE `tb_mensalidades` (
   `valor` double DEFAULT NULL,
   `id_pagamento` int(11) DEFAULT NULL,
   `esta_paga` tinyint(1) DEFAULT NULL,
-  `id_aluno` int(11) DEFAULT NULL,
+  `data_vencimento` date DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `tb_mensalidades_tb_alunos_id_fk` (`id_aluno`),
   KEY `tb_mensalidades_tb_pagamentos_id_fk` (`id_pagamento`),
-  CONSTRAINT `tb_mensalidades_tb_alunos_id_fk` FOREIGN KEY (`id_aluno`) REFERENCES `tb_alunos` (`id`),
-  CONSTRAINT `tb_mensalidades_tb_pagamentos_id_fk` FOREIGN KEY (`id_pagamento`) REFERENCES `tb_pagamentos` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  CONSTRAINT `tb_mensalidades_tb_pagamentos_id_fk` FOREIGN KEY (`id_pagamento`) REFERENCES `tb_pagamentos` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -129,6 +127,7 @@ CREATE TABLE `tb_mensalidades` (
 
 LOCK TABLES `tb_mensalidades` WRITE;
 /*!40000 ALTER TABLE `tb_mensalidades` DISABLE KEYS */;
+INSERT INTO `tb_mensalidades` (`id`, `valor`, `id_pagamento`, `esta_paga`, `data_vencimento`) VALUES (2,450,4,1,'2019-07-06'),(5,450,7,1,'2019-07-06');
 /*!40000 ALTER TABLE `tb_mensalidades` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -143,12 +142,12 @@ CREATE TABLE `tb_pagamentos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `valor` double DEFAULT NULL,
   `data` date DEFAULT NULL,
-  `tipo` int(11) DEFAULT NULL,
-  `id_aluno` int(11) NOT NULL,
+  `tipo` int(1) DEFAULT NULL,
+  `id_aluno` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `tb_pagamentos_tb_alunos_id_fk` (`id_aluno`),
-  CONSTRAINT `tb_pagamentos_tb_alunos_id_fk` FOREIGN KEY (`id_aluno`) REFERENCES `tb_alunos` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  CONSTRAINT `tb_pagamentos_tb_alunos_id_fk` FOREIGN KEY (`id_aluno`) REFERENCES `tb_alunos` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -157,32 +156,8 @@ CREATE TABLE `tb_pagamentos` (
 
 LOCK TABLES `tb_pagamentos` WRITE;
 /*!40000 ALTER TABLE `tb_pagamentos` DISABLE KEYS */;
+INSERT INTO `tb_pagamentos` (`id`, `valor`, `data`, `tipo`, `id_aluno`) VALUES (4,450,'2019-06-16',0,NULL),(7,450,'2019-06-16',0,26);
 /*!40000 ALTER TABLE `tb_pagamentos` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `tb_registro_pagamento`
---
-
-DROP TABLE IF EXISTS `tb_registro_pagamento`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tb_registro_pagamento` (
-  `id_pagamento` int(11) NOT NULL,
-  `id_aluno` int(11) NOT NULL,
-  PRIMARY KEY (`id_pagamento`,`id_aluno`),
-  UNIQUE KEY `tb_registro_pagamento_id_aluno_uindex` (`id_aluno`),
-  UNIQUE KEY `tb_registro_pagamento_id_pagamento_uindex` (`id_pagamento`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `tb_registro_pagamento`
---
-
-LOCK TABLES `tb_registro_pagamento` WRITE;
-/*!40000 ALTER TABLE `tb_registro_pagamento` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tb_registro_pagamento` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -194,4 +169,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-15 19:16:36
+-- Dump completed on 2019-06-16 22:52:39

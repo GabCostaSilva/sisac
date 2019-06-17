@@ -17,7 +17,7 @@ public class Aluno extends Pessoa {
     private int status; // 0 - Desmatriculado, 1 - Matriculado, 2 - Matricula Trancada
 
     public Aluno() {
-        registroPagamentos = new RegistroDePagamento();
+        registroPagamentos = new RegistroDePagamento(this);
         certificados = new ArrayList<>();
         status = 1;
         graduacao = 0;
@@ -61,6 +61,9 @@ public class Aluno extends Pessoa {
         return faixa;
     }
 
+    public void adicionarCertificado(Certificado certificado) {
+        certificados.add(certificado);
+    }
     public void promoverAluno() {
         faixa = Faixa.getFaixa(graduacao++);
     }
@@ -68,7 +71,6 @@ public class Aluno extends Pessoa {
     public void pagarMensalidade(Pagamento pagamento) {
         registroPagamentos.adicionaPagamento(pagamento);
     }
-
 
     public RegistroDePagamento getRegistroPagamentos() {
         return registroPagamentos;

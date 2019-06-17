@@ -1,6 +1,6 @@
 package sisac.models;
 
-public class Pessoa {
+public class Pessoa extends Object{
     private String nome;
     private String endereco;
     private String telefone;
