@@ -1,3 +1,5 @@
-.idea
-out
-target
+.idea/
+.idea/*
+out/
+target/
+*.class/

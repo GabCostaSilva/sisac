@@ -2,16 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c18a0269-5190-4094-bc44-c5dd9f27f93a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/5/458e688f7acecc39ccfcac617b70ff09521c28a7" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/5/458e688f7acecc39ccfcac617b70ff09521c28a7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/e/5ef5d40ad8e9e8c7590774b707719d67036f4c96" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/e/5ef5d40ad8e9e8c7590774b707719d67036f4c96" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/d/ed6661d6b2d68f4242a5b2125cf95df66cccab83" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/d/ed6661d6b2d68f4242a5b2125cf95df66cccab83" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/Parte1/diagramaClasses.asta" beforeDir="false" afterPath="$PROJECT_DIR$/documents/Parte1/diagramaClasses.asta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/Parte1/diagramaClasses.asta.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sisac/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/dao/AlunoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sisac/dao/AlunoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/tests/AlunoDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sisac/tests/AlunoDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/ConnectionFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/dao/AlunoDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/dao/CertificadoDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/dao/ExameDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/dao/MensalidadeDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/dao/PagamentoDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/helpers/CPFGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/helpers/DataFormatada.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/helpers/Faixa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/models/Aluno.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/models/Certificado.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/models/Exame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/models/Faixa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/models/HistoricoDeTentativas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/models/Mensalidade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/models/Pagamento.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/models/Pessoa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/models/RegistroDePagamento.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -56,16 +66,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sisac/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+            <state relative-caret-position="72">
+              <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#450#451#0" expanded="true" />
                 <element signature="e#492#493#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="11" selection-start-column="6" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -86,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/sisac/dao/AlunoDAO.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="142">
-              <caret line="90" column="5" lean-forward="true" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
+              <caret line="90" column="5" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -141,15 +159,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/target/classes/sisac/MANIFEST.MF">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sisac/models/RegistroDePagamento.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="696">
@@ -183,6 +192,7 @@
       <find>'</find>
       <find>'[a-z]*'</find>
       <find>get</find>
+      <find>.class</find>
     </findStrings>
     <replaceStrings>
       <replace>matricula</replace>
@@ -232,6 +242,7 @@
         <option value="$PROJECT_DIR$/src/main/java/sisac/dao/AlunoDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/sisac/tests/AlunoDaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/sisac/Main.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -259,32 +270,6 @@
             <path>
               <item name="Sisac" type="b2602c69:ProjectViewProjectNode" />
               <item name="Sisac" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sisac" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sisac" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sisac" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sisac" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sisac" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sisac" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sisac" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sisac" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sisac" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -464,7 +449,7 @@
       <workItem from="1560609138706" duration="17606000" />
       <workItem from="1560701496346" duration="15054000" />
       <workItem from="1560985583156" duration="3789000" />
-      <workItem from="1561007127489" duration="1751000" />
+      <workItem from="1561007127489" duration="2248000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1560565456945</created>
@@ -516,12 +501,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54432000" />
+    <option name="totallyTimeSpent" value="54929000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21742424" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21742424" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -539,7 +525,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.38677686" />
       <window_info anchor="bottom" id="Database Console" order="8" weight="0.32853404" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49848485" weight="0.36738056" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49848485" visible="true" weight="0.36694214" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50151515" side_tool="true" weight="0.5355372" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3289256" />
@@ -970,7 +956,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/sisac/dao/AlunoDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
-          <caret line="90" column="5" lean-forward="true" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
+          <caret line="90" column="5" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -989,13 +975,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sisac/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+        <state relative-caret-position="72">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#450#451#0" expanded="true" />
             <element signature="e#492#493#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="11" selection-start-column="6" selection-end-column="11" />
         </state>
       </provider>
     </entry>
