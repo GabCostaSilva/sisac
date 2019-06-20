@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c18a0269-5190-4094-bc44-c5dd9f27f93a" name="Default Changelist" comment="" />
+    <list default="true" id="c18a0269-5190-4094-bc44-c5dd9f27f93a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/5/458e688f7acecc39ccfcac617b70ff09521c28a7" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/5/458e688f7acecc39ccfcac617b70ff09521c28a7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/e/5ef5d40ad8e9e8c7590774b707719d67036f4c96" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/e/5ef5d40ad8e9e8c7590774b707719d67036f4c96" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/d/ed6661d6b2d68f4242a5b2125cf95df66cccab83" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/d/ed6661d6b2d68f4242a5b2125cf95df66cccab83" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/Parte1/diagramaClasses.asta" beforeDir="false" afterPath="$PROJECT_DIR$/documents/Parte1/diagramaClasses.asta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/Parte1/diagramaClasses.asta.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sisac/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/dao/AlunoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sisac/dao/AlunoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sisac/tests/AlunoDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sisac/tests/AlunoDaoTest.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,8 +59,34 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sisac/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="185" lean-forward="true" selection-start-line="185" selection-end-line="185" />
+            <state relative-caret-position="12">
+              <caret line="28" column="45" lean-forward="true" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#450#451#0" expanded="true" />
+                <element signature="e#492#493#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sisac/tests/AlunoDaoTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sisac/dao/AlunoDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="90" column="5" lean-forward="true" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,8 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sisac/models/Pagamento.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="76" column="33" lean-forward="true" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
+            <state relative-caret-position="1272">
+              <caret line="76" column="33" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#337#338#0" expanded="true" />
@@ -76,21 +113,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="das://9ab33a65-928f-45f2-96ff-bf56e802b7f8/schema/db_sisac_v1/table/tb_mensalidades">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="a83040d0-f589-4477-b37a-a4b21df397e2">
-              <filtering>
-                <filter text="" />
-              </filtering>
+            <state projectRestartId="257ebb5e-5cf4-481d-9b1e-04b80ce3a079">
+              <filtering />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="das://9ab33a65-928f-45f2-96ff-bf56e802b7f8/schema/db_sisac_v1/table/tb_pagamentos">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="a83040d0-f589-4477-b37a-a4b21df397e2">
-              <filtering>
-                <filter text="" />
-              </filtering>
+            <state projectRestartId="257ebb5e-5cf4-481d-9b1e-04b80ce3a079">
+              <filtering />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sisac/ConnectionFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/target/classes/sisac/MANIFEST.MF">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -98,8 +152,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sisac/models/RegistroDePagamento.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+            <state relative-caret-position="696">
+              <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#953#954#0" expanded="true" />
@@ -128,6 +182,7 @@
       <find>ad</find>
       <find>'</find>
       <find>'[a-z]*'</find>
+      <find>get</find>
     </findStrings>
     <replaceStrings>
       <replace>matricula</replace>
@@ -160,7 +215,6 @@
         <option value="$PROJECT_DIR$/src/main/java/sisac/models/RelatorioFinanceiro.java" />
         <option value="$PROJECT_DIR$/src/main/java/sisac/helpers/CPFGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/sisac/exceptions/Aluno/NotFoundException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sisac/tests/AlunoDaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/sisac/models/Exame.java" />
         <option value="$PROJECT_DIR$/src/main/java/sisac/helpers/DataFormatada.java" />
         <option value="$PROJECT_DIR$/src/main/java/sisac/tests/PagamentoDaoTest.java" />
@@ -173,9 +227,11 @@
         <option value="$PROJECT_DIR$/src/main/java/sisac/models/Aluno.java" />
         <option value="$PROJECT_DIR$/src/main/java/sisac/models/RegistroDePagamento.java" />
         <option value="$PROJECT_DIR$/src/main/java/sisac/dao/PagamentoDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sisac/models/Pagamento.java" />
+        <option value="$PROJECT_DIR$/target/classes/sisac/MANIFEST.MF" />
         <option value="$PROJECT_DIR$/src/main/java/sisac/dao/AlunoDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/sisac/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sisac/models/Pagamento.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sisac/tests/AlunoDaoTest.java" />
       </list>
     </option>
   </component>
@@ -197,7 +253,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -210,10 +265,32 @@
               <item name="Sisac" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Sisac" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sisac" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sisac" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sisac" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sisac" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sisac" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sisac" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -384,7 +461,9 @@
       <workItem from="1560569001232" duration="5442000" />
       <workItem from="1560606989821" duration="2086000" />
       <workItem from="1560609138706" duration="17606000" />
-      <workItem from="1560701496346" duration="14653000" />
+      <workItem from="1560701496346" duration="15054000" />
+      <workItem from="1560985583156" duration="3789000" />
+      <workItem from="1561007127489" duration="1472000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1560565456945</created>
@@ -429,13 +508,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48491000" />
+    <option name="totallyTimeSpent" value="54153000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21136364" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21742424" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -443,19 +522,20 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Image Layers" order="6" />
       <window_info id="simpleUML" order="7" />
+      <window_info anchor="bottom" id="Inspection Results" weight="0.3289256" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289256" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.36363637" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36363637" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3983471" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.38677686" />
       <window_info anchor="bottom" id="Database Console" order="8" weight="0.32853404" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49848485" weight="0.36859503" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49848485" weight="0.36738056" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50151515" side_tool="true" weight="0.5355372" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3289256" />
+      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.3289256" />
       <window_info anchor="bottom" id="Database Changes" order="13" weight="0.3289256" />
       <window_info anchor="bottom" id="SonarLint" order="14" weight="0.2342932" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -464,7 +544,7 @@
       <window_info anchor="right" id="Maven" order="3" weight="0.26287878" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info active="true" anchor="right" id="Database" order="6" visible="true" weight="0.24166666" />
+      <window_info anchor="right" id="Database" order="6" weight="0.11439394" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
@@ -663,30 +743,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/ConnectionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sisac/tests/PagamentoDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
           <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/tests/AlunoDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -707,16 +767,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/dao/DAOInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/dao/DAOInterface.java" />
     <entry file="uml://JAVA/sisac.dao">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -794,16 +845,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/dao/AlunoDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="116" column="22" lean-forward="true" selection-start-line="116" selection-start-column="22" selection-end-line="116" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://9ab33a65-928f-45f2-96ff-bf56e802b7f8/schema/db_sisac_v1/table/tb_alunos">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state projectRestartId="a83040d0-f589-4477-b37a-a4b21df397e2">
@@ -835,32 +876,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="185" lean-forward="true" selection-start-line="185" selection-end-line="185" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/models/RegistroDePagamento.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#953#954#0" expanded="true" />
-            <element signature="e#1009#1010#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sisac/models/Pagamento.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="76" column="33" lean-forward="true" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
+        <state relative-caret-position="1272">
+          <caret line="76" column="33" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#337#338#0" expanded="true" />
@@ -873,19 +892,76 @@
     </entry>
     <entry file="das://9ab33a65-928f-45f2-96ff-bf56e802b7f8/schema/db_sisac_v1/table/tb_mensalidades">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="a83040d0-f589-4477-b37a-a4b21df397e2">
-          <filtering>
-            <filter text="" />
-          </filtering>
+        <state projectRestartId="257ebb5e-5cf4-481d-9b1e-04b80ce3a079">
+          <filtering />
         </state>
       </provider>
     </entry>
     <entry file="das://9ab33a65-928f-45f2-96ff-bf56e802b7f8/schema/db_sisac_v1/table/tb_pagamentos">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="a83040d0-f589-4477-b37a-a4b21df397e2">
-          <filtering>
-            <filter text="" />
-          </filtering>
+        <state projectRestartId="257ebb5e-5cf4-481d-9b1e-04b80ce3a079">
+          <filtering />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/ConnectionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/sisac/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/models/RegistroDePagamento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#953#954#0" expanded="true" />
+            <element signature="e#1009#1010#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/dao/AlunoDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="90" column="5" lean-forward="true" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12">
+          <caret line="28" column="45" lean-forward="true" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#450#451#0" expanded="true" />
+            <element signature="e#492#493#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sisac/tests/AlunoDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

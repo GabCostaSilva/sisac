@@ -13,3 +13,23 @@ U
 %src/main/java/sisac/models/Aluno.java,4/5/458e688f7acecc39ccfcac617b70ff09521c28a7
 M
 src/main/java/sisac/Main.java,e/d/ed6661d6b2d68f4242a5b2125cf95df66cccab83
+Z
+*src/main/java/sisac/ConnectionFactory.java,8/0/808c765b486678cbc61a75207ae88d953b8eacdf
+_
+/src/main/java/sisac/tests/PagamentoDaoTest.java,2/0/20710ee705b4fe7ec44d51c362c1e0d62ef2aa51
+U
+%src/main/java/sisac/models/Faixa.java,a/c/ac3cecec249d011511a747258e7e5fc343280628
+V
+&src/main/java/sisac/models/Pessoa.java,f/2/f2672365d52299f135a429d31826a4def2adf10d
+[
++src/main/java/sisac/models/Mensalidade.java,0/8/08fb9ec87e2fdc4a510a71dbc3a029dfe12c38fb
+[
++src/main/java/sisac/dao/MensalidadeDAO.java,4/0/40a486c9c2033d1e0289cbc3b261cb1ba73ec169
+a
+1src/main/java/sisac/tests/MensalidadeDaoTest.java,f/e/fefa2172f9733bdb7266f54caa232b49686ec37a
+Y
+)src/main/java/sisac/dao/PagamentoDAO.java,1/b/1bd8b43662b14bb09c9051baa44c62056600dd58
+c
+3src/main/java/sisac/models/RegistroDePagamento.java,5/b/5b72bdb2efcfcf7fa2593b974cd0aaa3a0d10844
+Y
+)src/main/java/sisac/models/Pagamento.java,3/5/355e2f50aa65f34c49cb1bbdd84e299cf5b11184

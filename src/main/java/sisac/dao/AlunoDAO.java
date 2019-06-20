@@ -15,10 +15,10 @@ public class AlunoDAO{
     public Aluno create(Aluno aluno) {
         Connection con = new ConnectionFactory().getConnection();
         String sql = "INSERT INTO tb_alunos (" +
-                        "nome, endereco, telefone, " +
-                        "data_matricula, " +
-                        "data_matricula_fim, status, faixa, cpf)" +
-                        " VALUES(?,?,?,?,?,?,?,?);";
+                "nome, endereco, telefone, " +
+                "data_matricula, " +
+                "data_matricula_fim, status, faixa, cpf)" +
+                " VALUES(?,?,?,?,?,?,?,?);";
 
         try {
             PreparedStatement stmt = createStatement(aluno, sql);
@@ -37,10 +37,10 @@ public class AlunoDAO{
             }
             stmt.close();
             con.close();
-         }
+        }
 
         catch(SQLException e) {
-           e.printStackTrace();
+            e.printStackTrace();
         }
         return aluno;
     }
@@ -71,7 +71,7 @@ public class AlunoDAO{
                 "telefone=?, data_matricula=?, data_matricula_fim=?, status=?, cpf=?, faixa=?" +
                 "WHERE cpf like %s", aluno.getCpf());
         try {
-           PreparedStatement stmt = createStatement(aluno, sql);
+            PreparedStatement stmt = createStatement(aluno, sql);
 
             stmt.execute();
             stmt.close();
@@ -84,59 +84,54 @@ public class AlunoDAO{
         return aluno;
     }
 
-    public List<Aluno> get() {
+    public List<Aluno> get() throws SQLException{
         String query = "SELECT * FROM tb_alunos";
 
         return createAlunos(query);
     }
 
-    public List<Aluno> findByCpf(String cpf) {
+    public List<Aluno> findByCpf(String cpf) throws SQLException{
         String query = String.format("SELECT * FROM tb_alunos WHERE cpf LIKE \"%s\"", cpf);
 
         return createAlunos(query);
     }
 
-    private List<Aluno> createAlunos(String query) {
+    private List<Aluno> createAlunos(String query) throws SQLException{
         Connection con = new ConnectionFactory().getConnection();
         ArrayList<Aluno> alunos = new ArrayList<>();
 
-        try(PreparedStatement stmt = con.prepareStatement(query)) {
+        PreparedStatement stmt = con.prepareStatement(query);
 
-            ResultSet rs = stmt.executeQuery();
-            Aluno a;
+        ResultSet rs = stmt.executeQuery();
+        Aluno a;
 
-            while(rs.next()) {
-                String nomeAluno = rs.getString("nome");
-                String endereco = rs.getString("endereco");
-                String telefone = rs.getString("telefone");
-                Date dataMatricula = rs.getDate("data_matricula");
-                Date dataLimiteMatricula = rs.getDate("data_matricula_fim");
-                int status = rs.getInt("status");
-                String faixa = rs.getString("faixa");
-                String cpf = rs.getString("cpf");
-                long id = rs.getLong("id");
+        while(rs.next()) {
+            String nomeAluno = rs.getString("nome");
+            String endereco = rs.getString("endereco");
+            String telefone = rs.getString("telefone");
+            Date dataMatricula = rs.getDate("data_matricula");
+            Date dataLimiteMatricula = rs.getDate("data_matricula_fim");
+            int status = rs.getInt("status");
+            String faixa = rs.getString("faixa");
+            String cpf = rs.getString("cpf");
+            long id = rs.getLong("id");
 
-                a = new Aluno();
+            a = new Aluno();
 
-                a.setNome(nomeAluno);
-                a.setEndereco(endereco);
-                a.setTelefone(telefone);
-                a.setDataMatricula(new DataFormatada(dataMatricula.toLocalDate()));
-                a.setDataFimMatricula(new DataFormatada(dataLimiteMatricula.toLocalDate()));
-                a.setStatus(status);
-                a.setCpf(cpf);
-                a.setFaixa(faixa);
-                a.setId(id);
+            a.setNome(nomeAluno);
+            a.setEndereco(endereco);
+            a.setTelefone(telefone);
+            a.setDataMatricula(new DataFormatada(dataMatricula.toLocalDate()));
+            a.setDataFimMatricula(new DataFormatada(dataLimiteMatricula.toLocalDate()));
+            a.setStatus(status);
+            a.setCpf(cpf);
+            a.setFaixa(faixa);
+            a.setId(id);
 
-                alunos.add(a);
-            }
-            stmt.execute();
-            con.close();
+            alunos.add(a);
         }
-        catch(SQLException e) {
-            e.printStackTrace();
-        }
-
+        stmt.execute();
+        con.close();
         return alunos;
     }
 

@@ -1,15 +1,9 @@
 
-¤squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÏÊãƒùÿÿÿÿ8©´Øêµ-
-Fsquid:S1148O"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8™ë¢êµ-
-Gsquid:S1148™"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8£ƒŸêµ-
-Fsquid:S1148."#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÛïÃèµ-
-msquid:S2095H"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(’ÀÌ‰8ÓÔÙêµ-
-[
-squid:S1060"9Replace this use of System.out or System.err by a logger.(è­Şúûÿÿÿÿ8Ú¨‹èµ-
-[
-squid:S106Q"9Replace this use of System.out or System.err by a logger.(Ö¿Œ·øÿÿÿÿ8™ë¢êµ-
-jsquid:S2095{"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(Ë¼Ëûÿÿÿÿ8£ƒŸêµ-
-rsquid:S20956"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÎÂñ¡úÿÿÿÿ8Ø™Ûêµ-
-Fsquid:S1148d"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8£ƒŸêµ-
-[
-squid:S106`"9Replace this use of System.out or System.err by a logger.(ØÑåéûÿÿÿÿ8£ƒŸêµ-
+Gsquid:S1148‰"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8£ƒŸêµ-
+Fsquid:S1148Q"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ä„—˜¶-
+jsquid:S2095i"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(Ë¼Ëûÿÿÿÿ8£ƒŸêµ-
+msquid:S20957"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(’ÀÌ‰8ÓÔÙêµ-
+¤squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÏÊãƒùÿÿÿÿ8©´Øêµ-
+Fsquid:S1148>"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8™ë¢êµ-
+ssquid:S2095‘"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÎÂñ¡úÿÿÿÿ8¥©º—¶-
+Fsquid:S1148+"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÛïÃèµ-

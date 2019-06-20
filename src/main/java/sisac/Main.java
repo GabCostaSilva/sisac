@@ -7,18 +7,37 @@ import sisac.models.Aluno;
 import sisac.models.Certificado;
 import sisac.models.Pagamento;
 
+import java.sql.SQLException;
 import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
+    private static AlunoDAO alunoDao;
+    private static final String NOT_FOUND = "Aluno não encontrado, tente novamente";
+
+    public Main() {
+        alunoDao = new AlunoDAO();
+    }
+
+
+    public static Aluno getAluno(String cpf){
+        List<Aluno> alunos;
+        Aluno aluno = null;
+        try {
+            alunos = alunoDao.findByCpf(cpf);
+            aluno = alunos.get(0);
+        } catch(NullPointerException | SQLException | IndexOutOfBoundsException e) {
+            System.out.printf("%s\n", NOT_FOUND);
+        }
+        return aluno;
+    }
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
 
         boolean execute = true;
-
-        AlunoDAO alunoDao = new AlunoDAO();
 
         System.out.println("\n***************************************");
         System.out.println("Bem Vindo ao SISAC!\n" +
@@ -57,7 +76,7 @@ public class Main {
 
                 case 1:
                     System.out.println("Matricular novo aluno");
-                     aluno = new Aluno();
+                    aluno = new Aluno();
                     System.out.println("Nome: ");
                     aluno.setNome(in.nextLine());
                     System.out.println("CPF: ");
@@ -69,27 +88,35 @@ public class Main {
                     System.out.println("Faixa: ");
                     aluno.setFaixa(in.nextLine());
                     System.out.println("Data fim da matricula: (dd/mm/aaaa)");
-                    aluno.setDataFimMatricula(new DataFormatada(in.nextLine()));
-                    aluno.setDataMatricula(new DataFormatada(LocalDate.now()));
+                    try {
+                        aluno.setDataFimMatricula(new DataFormatada(in.nextLine()));
+                        aluno.setDataMatricula(new DataFormatada(LocalDate.now()));
+                        alunoDao.create(aluno);
+                        System.out.println("Aluno matriculado com sucesso.");
 
-                    alunoDao.create(aluno);
-                    System.out.println("Aluno matriculado com sucesso.");
+                    } catch (NullPointerException | DateTimeParseException e) {
+                        System.out.println("\nOps... Insira a data no formato dia/mes/ano");
+                    }
+
                     break;
 
                 case 2:
                     System.out.println("Atualizar cadastro de aluno");
                     System.out.println("Digite o cpf do aluno a ser alterado");
-                    alunos = alunoDao.findByCpf(in.nextLine());
-                    aluno = alunos.get(0);
+                    aluno = getAluno(in.nextLine());
                     System.out.println(aluno.toString());
                     break;
 
                 case 3:
                     System.out.println("Lista de alunos");
                     System.out.println("--------------------------------------------");
-                    for(Aluno a : alunoDao.get()) {
-                        System.out.println(a.toString());
-                        System.out.println("---------------------------------------");
+                    try {
+                        for(Aluno a : alunoDao.get()) {
+                            System.out.println(a.toString());
+                            System.out.println("---------------------------------------");
+                        }
+                    } catch (SQLException e) {
+                        System.out.printf("%s\n", NOT_FOUND);
                     }
                     break;
 
@@ -103,8 +130,7 @@ public class Main {
                 case 5:
                     System.out.println("Promover aluno");
                     System.out.println("Digite o cpf do aluno a ser promovido");
-                    alunos = alunoDao.findByCpf(in.nextLine());
-                    aluno = alunos.get(0);
+                    aluno = getAluno(in.nextLine());
                     aluno.promoverAluno();
                     alunoDao.update(aluno);
 
@@ -114,18 +140,17 @@ public class Main {
                 case 6:
                     System.out.println("Trancar matrícula de aluno");
                     System.out.println("Digite o cpf do aluno a ser alterado");
-                    alunos = alunoDao.findByCpf(in.nextLine());
-                    aluno = alunos.get(0);
+                    aluno = getAluno(in.nextLine());
                     aluno.setStatus(2);
                     alunoDao.update(aluno);
+
                     System.out.printf("A matrícula de %s foi trancada.\n", aluno.getNome());
                     break;
 
                 case 7:
                     System.out.println("Destrancar matrícula de aluno");
                     System.out.println("Digite o cpf do aluno a ser alterado");
-                    alunos = alunoDao.findByCpf(in.nextLine());
-                    aluno = alunos.get(0);
+                    aluno = getAluno(in.nextLine());
                     aluno.setStatus(1);
                     alunoDao.update(aluno);
                     System.out.printf("A matrícula de %s foi destrancada.\n", aluno.getNome());
@@ -133,8 +158,8 @@ public class Main {
 
                 case 8:
                     System.out.println("Digite o cpf do aluno a ser convidado para o exame");
-                    alunos = alunoDao.findByCpf(in.nextLine());
-                    System.out.printf("Email com convite enviado à %s\n", alunos.get(0).getNome());
+                    aluno = getAluno(in.nextLine());
+                    System.out.printf("Email com convite enviado à %s\n", aluno.getNome());
                     break;
 
                 case 9:
@@ -156,19 +181,13 @@ public class Main {
                     try {
                         valor = Integer.parseInt(in.nextLine());
                     }catch (NumberFormatException e) {
-                        e.printStackTrace();
+                        System.out.println("Insira um valor válido.");
                     }
                     pagamento.setValor(valor);
                     pagamento.setData(new DataFormatada(LocalDate.now()));
 
                     System.out.println("Digite o cpf do aluno que efetuou o pagamento:");
-                    alunos = alunoDao.findByCpf(in.nextLine());
-                    try {
-                        aluno = alunos.get(0);
-                    } catch (IndexOutOfBoundsException e) {
-                        System.out.println("Aluno não encontrado, tente novamente");
-                        break;
-                    }
+                    aluno = getAluno(in.nextLine());
                     pagamento.setIdAluno(aluno.getId());
                     aluno.pagarMensalidade(pagamento);
                     System.out.println("Pagamento efetuado com sucesso.");
@@ -176,13 +195,8 @@ public class Main {
 
                 case 10:
                     System.out.println("Digite o cpf do aluno a ser gerado relatório");
-                    alunos = alunoDao.findByCpf(in.nextLine());
-                    try {
-                        aluno = alunos.get(0);
-                    } catch (IndexOutOfBoundsException e) {
-                        System.out.println("Aluno não encontrado, tente novamente");
-                        break;
-                    }
+                    aluno = getAluno(in.nextLine());
+
 
                     for(Pagamento p : aluno.getRegistroPagamentos().getPagamentos()){
                         System.out.println(p.toString());
@@ -191,15 +205,9 @@ public class Main {
 
                 case 11:
                     System.out.println("Digite o cpf do aluno a ser gerado certificado");
-                    alunos = alunoDao.findByCpf(in.nextLine());
-                    try {
-                        aluno = alunos.get(0);
-                    } catch (IndexOutOfBoundsException e) {
-                        System.out.println("Aluno não encontrado, tente novamente");
-                        break;
-                    }
-                   aluno.adicionarCertificado(new Certificado(aluno));
-
+                    aluno = getAluno(in.nextLine());
+                    aluno.adicionarCertificado(new Certificado(aluno));
+                    break;
                 default:
                     System.out.println("Opção inválida.");
                     break;

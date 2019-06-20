@@ -1,92 +1,135 @@
 
-O
-squid:S1062"9Replace this use of System.out or System.err by a logger.(»ÎÆı
-tsquid:S3457n"Q%n should be used in place of \n to produce the platform-specific line separator.(¦ıõÚüÿÿÿÿ8”ïıêµ-
-Hsquid:S1481"1Remove this unused "pagamentoDao" local variable.(áÊÛµ
-V
-squid:S106w"9Replace this use of System.out or System.err by a logger.(ŞèŞ8ª„ëµ-
-V
-squid:S106J"9Replace this use of System.out or System.err by a logger.(ûÑÍ8“ŸÏèµ-
-Ssquid:S1854"<Remove this useless assignment to local variable "exameDao".(²Ğãõ
-T
-squid:S1068"9Replace this use of System.out or System.err by a logger.(¾—Ò·ùÿÿÿÿ
-T
-squid:S106%"9Replace this use of System.out or System.err by a logger.(òúôûûÿÿÿÿ
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(ì®Ì˜úÿÿÿÿ
-O
-squid:S106"9Replace this use of System.out or System.err by a logger.(‘¯Ê”
+^squid:UselessImportCheck"3Remove this unused import 'sisac.dao.PagamentoDAO'.(æ‚ñ8ß™ñ¶-
 [
-squid:S106X"9Replace this use of System.out or System.err by a logger.(æã˜Šşÿÿÿÿ8ı™±éµ-
-[
-squid:S106n"9Replace this use of System.out or System.err by a logger.(¦ıõÚüÿÿÿÿ8Ë¨©êµ-
+squid:S106a"9Replace this use of System.out or System.err by a logger.(ÀÏ¨–ûÿÿÿÿ8ÏÔ¿Œ¶-
+\
+squid:S106²"9Replace this use of System.out or System.err by a logger.(ÅëÕİıÿÿÿÿ8œÊŒ¶-
 V
-squid:S106c"9Replace this use of System.out or System.err by a logger.(ÚúÙ8¶’ëµ-
-O
-squid:S106 "9Replace this use of System.out or System.err by a logger.(ä®°Ù
+squid:S106X"9Replace this use of System.out or System.err by a logger.(¿–‘÷8ÏÔ¿Œ¶-
+‹squid:S1192©"gDefine a constant instead of duplicating this literal "Aluno nÃ£o encontrado, tente novamente" 3 times.(÷ÍúÙÿÿÿÿÿ8òäÓŒ¶-
+\
+squid:S106¤"9Replace this use of System.out or System.err by a logger.(ËÿÔÜşÿÿÿÿ8ÏÔ¿Œ¶-
 [
-squid:S106W"9Replace this use of System.out or System.err by a logger.(ÀÏ¨–ûÿÿÿÿ8 Á°éµ-
-V
-squid:S106q"9Replace this use of System.out or System.err by a logger.(ÆüõÛ8ª„ëµ-
-Dsquid:S1481"-Remove this unused "exameDao" local variable.(²Ğãõ
-[
-squid:S106r"9Replace this use of System.out or System.err by a logger.(æã˜Šşÿÿÿÿ8ª„ëµ-
-V
-squid:S106R"9Replace this use of System.out or System.err by a logger.(áÂª8ĞÄéµ-
+squid:S106Y"9Replace this use of System.out or System.err by a logger.(¬ó˜°ıÿÿÿÿ8™‡­éµ-
 T
-squid:S106""9Replace this use of System.out or System.err by a logger.(ğ™¾´úÿÿÿÿ
-V
-squid:S106]"9Replace this use of System.out or System.err by a logger.(¾Ìå»8ÖãŠëµ-
+squid:S106&"9Replace this use of System.out or System.err by a logger.(¦²úÿÿÿÿ
 O
-squid:S106"9Replace this use of System.out or System.err by a logger.(‹”Ë 
+squid:S106"9Replace this use of System.out or System.err by a logger.(‹”Ë 
 [
-squid:S106|"9Replace this use of System.out or System.err by a logger.(òç„‚øÿÿÿÿ8ı™±éµ-
-O
-squid:S106"9Replace this use of System.out or System.err by a logger.(¤À¯”
-O
-squid:S106"9Replace this use of System.out or System.err by a logger.(Š¢„œ
+squid:S106L"9Replace this use of System.out or System.err by a logger.(Š“ƒ”ùÿÿÿÿ8¼ÃÀŒ¶-
+V
+squid:S106o"9Replace this use of System.out or System.err by a logger.(ÚúÙ8ÏÔ¿Œ¶-
+\
+squid:S106‰"9Replace this use of System.out or System.err by a logger.(ğ±ÈŸÿÿÿÿÿ8ÏÔ¿Œ¶-
+_squid:UselessImportCheck"/Remove this unused import 'sisac.dao.ExameDao'.(Çûà¢øÿÿÿÿ8ß™ñ¶-
 [
-squid:S106K"9Replace this use of System.out or System.err by a logger.(æã˜Šşÿÿÿÿ8ÓùÏèµ-
-O
-squid:S106@"9Replace this use of System.out or System.err by a logger.(ø§Ôæ
+squid:S106Q"9Replace this use of System.out or System.err by a logger.(æã˜Šşÿÿÿÿ8ÓùÏèµ-
 V
-squid:S106\"9Replace this use of System.out or System.err by a logger.(¼Ê‚à8ÖãŠëµ-
-Xsquid:S1854L":Remove this useless assignment to local variable "alunos".(àŠ©8ı„êèµ-
-O
-squid:S1066"9Replace this use of System.out or System.err by a logger.(òûê†
-O
-squid:S106>"9Replace this use of System.out or System.err by a logger.(æåÀ
-O
-squid:S106&"9Replace this use of System.out or System.err by a logger.(ÉÄÛŞ
-T
-squid:S106#"9Replace this use of System.out or System.err by a logger.(¦²úÿÿÿÿ
-O
-squid:S106"9Replace this use of System.out or System.err by a logger.(•°Ç
+squid:S106["9Replace this use of System.out or System.err by a logger.(áÂª8ÏÔ¿Œ¶-
 V
-squid:S106h"9Replace this use of System.out or System.err by a logger.(º‹íë8ÅÄ¥êµ-
+squid:S106b"9Replace this use of System.out or System.err by a logger.(œåŸÏ8ı™±éµ-
 T
-squid:S106<"9Replace this use of System.out or System.err by a logger.(¡çÄÿøÿÿÿÿ
+squid:S106$"9Replace this use of System.out or System.err by a logger.(Îú›ıÿÿÿÿ
+T
+squid:S106("9Replace this use of System.out or System.err by a logger.(òúôûûÿÿÿÿ
+\
+squid:S106·"9Replace this use of System.out or System.err by a logger.(÷ÍúÙÿÿÿÿÿ8ÒÍŒ¶-
+W
+squid:S106™"9Replace this use of System.out or System.err by a logger.(ÚÒ«¯8ÏÔ¿Œ¶-
+V
+squid:S106s"9Replace this use of System.out or System.err by a logger.(º‹íë8ÏÔ¿Œ¶-
+Gsquid:S1148Ÿ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÏÔ¿Œ¶-
+o
+squid:S128À"LEnd this switch case with an unconditional break, return or throw statement.(—Í×©øÿÿÿÿ8ÒıÀš¶-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(ñ€Äûøÿÿÿÿ8®êï¶-
+[
+squid:S106*"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8¥‚é¶-
+V
+squid:S106}"9Replace this use of System.out or System.err by a logger.(ÆüõÛ8ÏÔ¿Œ¶-
+O
+squid:S1066"9Replace this use of System.out or System.err by a logger.(»ÎÆı
+\
+squid:S106"9Replace this use of System.out or System.err by a logger.(¹şàšıÿÿÿÿ8ÏÔ¿Œ¶-
+\
+squid:S106©"9Replace this use of System.out or System.err by a logger.(÷ÍúÙÿÿÿÿÿ8ÏÔ¿Œ¶-
+[
+squid:S106\"9Replace this use of System.out or System.err by a logger.(™çšùÿÿÿÿ8ĞÄéµ-
+V
+squid:S106P"9Replace this use of System.out or System.err by a logger.(ûÑÍ8“ŸÏèµ-
+[
+squid:S106~"9Replace this use of System.out or System.err by a logger.(æã˜Šşÿÿÿÿ8ª„ëµ-
+[
+squid:S106d"9Replace this use of System.out or System.err by a logger.(÷ ôÏşÿÿÿÿ8€ÓÂŒ¶-
+\
+squid:S106"9Replace this use of System.out or System.err by a logger.(ë¾µâúÿÿÿÿ8ÏÔ¿Œ¶-
+W
+squid:S106Á"9Replace this use of System.out or System.err by a logger.(ÈÀ§¾8ÒıÀš¶-
+O
+squid:S106#"9Replace this use of System.out or System.err by a logger.(ä®°Ù
+T
+squid:S106G"9Replace this use of System.out or System.err by a logger.(‚¾”Îûÿÿÿÿ
+T
+squid:S106?"9Replace this use of System.out or System.err by a logger.(ÛŒõ‘ùÿÿÿÿ
+V
+squid:S106/"9Replace this use of System.out or System.err by a logger.(şæê8ü¡¢Š¶-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8­Ôç¶-
+[
+squid:S106t"9Replace this use of System.out or System.err by a logger.(æã˜Šşÿÿÿÿ8ÅÄ¥êµ-
+W
+squid:S106ƒ"9Replace this use of System.out or System.err by a logger.(ŞèŞ8ÏÔ¿Œ¶-
+\
+squid:S106®"9Replace this use of System.out or System.err by a logger.(³°ãïøÿÿÿÿ8ÏÔ¿Œ¶-
+Gsquid:S1148•"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÏÔ¿Œ¶-
+psquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(Çµí‘8é­Š¶-
+O
+squid:S106 "9Replace this use of System.out or System.err by a logger.(Š¢„œ
+\
+squid:S106Ì"9Replace this use of System.out or System.err by a logger.(òç„‚øÿÿÿÿ8ÒıÀš¶-
+[
+squid:S106""9Replace this use of System.out or System.err by a logger.(ë†ŠÀùÿÿÿÿ8èŞÁêµ-
+V
+squid:S106h"9Replace this use of System.out or System.err by a logger.(¼Ê‚à8ÏÔ¿Œ¶-
+V
+squid:S106i"9Replace this use of System.out or System.err by a logger.(¾Ìå»8ÖãŠëµ-
+psquid:S3457ƒ"Q%n should be used in place of \n to produce the platform-specific line separator.(ŞèŞ8ËÜÏ˜¶-
+O
+squid:S106"9Replace this use of System.out or System.err by a logger.(¤À¯”
 N
-squid:S106$"9Replace this use of System.out or System.err by a logger.(”•Ñ*
+squid:S106'"9Replace this use of System.out or System.err by a logger.(”•Ñ*
+tsquid:S3457y"Q%n should be used in place of \n to produce the platform-specific line separator.(¦ıõÚüÿÿÿÿ8ËÜÏ˜¶-
 T
-squid:S106!"9Replace this use of System.out or System.err by a logger.(Îú›ıÿÿÿÿ
+squid:S106="9Replace this use of System.out or System.err by a logger.(¾—Ò·ùÿÿÿÿ
+O
+squid:S106"9Replace this use of System.out or System.err by a logger.(•°Ç
+\
+squid:S106Æ"9Replace this use of System.out or System.err by a logger.(÷ÍúÙÿÿÿÿÿ8ÒıÀš¶-
 [
-squid:S106P"9Replace this use of System.out or System.err by a logger.(¬ó˜°ıÿÿÿÿ8™‡­éµ-
-Wsquid:S1854"@Remove this useless assignment to local variable "pagamentoDao".(áÊÛµ
+squid:S106"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8Ì×å¶-
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(ì®Ì˜úÿÿÿÿ
+\
+squid:S106‡"9Replace this use of System.out or System.err by a logger.(áçßøÿÿÿÿ8ÏÔ¿Œ¶-
+O
+squid:S106;"9Replace this use of System.out or System.err by a logger.(òûê†
+ˆsquid:S1192Q"eDefine a constant instead of duplicating this literal "Digite o cpf do aluno a ser alterado" 3 times.(æã˜Šşÿÿÿÿ8ÅÄ¥êµ-
+O
+squid:S106C"9Replace this use of System.out or System.err by a logger.(æåÀ
+O
+squid:S106)"9Replace this use of System.out or System.err by a logger.(ÉÄÛŞ
+T
+squid:S106A"9Replace this use of System.out or System.err by a logger.(¡çÄÿøÿÿÿÿ
+[
+squid:S106y"9Replace this use of System.out or System.err by a logger.(¦ıõÚüÿÿÿÿ8ÏÔ¿Œ¶-
+T
+squid:S106%"9Replace this use of System.out or System.err by a logger.(‘¶ãñıÿÿÿÿ
+\
+squid:S106¼"9Replace this use of System.out or System.err by a logger.(Ñ£±Ôúÿÿÿÿ8ÒıÀš¶-
+O
+squid:S106E"9Replace this use of System.out or System.err by a logger.(ø§Ôæ
+usquid:S3457‰"Q%n should be used in place of \n to produce the platform-specific line separator.(ğ±ÈŸÿÿÿÿÿ8ËÜÏ˜¶-
+O
+squid:S106!"9Replace this use of System.out or System.err by a logger.(‘¯Ê”
 V
-squid:S106O"9Replace this use of System.out or System.err by a logger.(¿–‘÷8¤¾ˆéµ-
-[
-squid:S106S"9Replace this use of System.out or System.err by a logger.(™çšùÿÿÿÿ8ĞÄéµ-
-osquid:S3457w"Q%n should be used in place of \n to produce the platform-specific line separator.(ŞèŞ8ª„ëµ-
-T
-squid:S106B"9Replace this use of System.out or System.err by a logger.(‚¾”Îûÿÿÿÿ
-ˆsquid:S1192K"eDefine a constant instead of duplicating this literal "Digite o cpf do aluno a ser alterado" 4 times.(æã˜Šşÿÿÿÿ8ÅÄ¥êµ-
-T
-squid:S106G"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ
-?squid:S1148,"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-T
-squid:S106:"9Replace this use of System.out or System.err by a logger.(ÛŒõ‘ùÿÿÿÿ
-[
-squid:S106i"9Replace this use of System.out or System.err by a logger.(æã˜Šşÿÿÿÿ8ÅÄ¥êµ-
-[
-squid:S106"9Replace this use of System.out or System.err by a logger.(ë†ŠÀùÿÿÿÿ8èŞÁêµ-
+squid:S106T"9Replace this use of System.out or System.err by a logger.(Œ»8ĞÄéµ-

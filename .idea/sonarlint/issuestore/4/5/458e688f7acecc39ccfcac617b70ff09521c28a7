@@ -1,3 +1,3 @@
 
 Žsquid:S1319&"wThe type of the "certificados" object should be an interface such as "List" rather than the implementation "ArrayList".(²æ¸‚
-Œsquid:S1319s"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".( º†üüÿÿÿÿ
+Œsquid:S1319t"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".( º†üüÿÿÿÿ

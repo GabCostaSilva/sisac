@@ -9,6 +9,7 @@ import sisac.helpers.CPFGenerator;
 import sisac.helpers.DataFormatada;
 import sisac.models.Aluno;
 
+import java.sql.SQLException;
 import java.util.List;
 
 class AlunoDaoTest {
@@ -46,8 +47,13 @@ class AlunoDaoTest {
     }
 
     @Test void shouldListAlunos(){
-        List<Aluno> alunos = alunoDAO.get();
+        try {
+            List<Aluno> alunos = alunoDAO.get();
+            assertNotNull(alunos);
 
-        assertNotNull(alunos);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 }
